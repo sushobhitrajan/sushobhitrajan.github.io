@@ -3,53 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sushobhit Rajan | ML & Deep Learning</title>
+    <title>Sushobhit Rajan | Deep Learning Blog</title>
     
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <style>
-        /* This is where you change your background and colors */
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            background-color: #0f172a; /* Dark Blue-Grey Background */
-            color: #e2e8f0; 
-            line-height: 1.6; 
-            margin: 0;
-            padding: 0;
+        :root {
+            --bg: #0b0f1a;
+            --card-bg: #161b2a;
+            --accent: #38bdf8;
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+            --code-bg: #000000;
         }
-        .container { max-width: 900px; margin: 50px auto; padding: 20px; }
-        header { border-bottom: 2px solid #38bdf8; padding-bottom: 20px; margin-bottom: 40px; }
-        h1 { color: #38bdf8; margin: 0; }
-        .article-card { 
-            background: #1e293b; 
-            padding: 30px; 
-            border-radius: 15px; 
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: var(--bg); 
+            color: var(--text-main); 
+            line-height: 1.7; 
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 40px;
+            max-width: 1100px;
+            width: 100%;
+            padding: 60px 20px;
+        }
+
+        /* Sidebar Styling */
+        aside {
+            position: sticky;
+            top: 60px;
+            height: fit-content;
+        }
+
+        .profile-card {
+            border-left: 2px solid var(--accent);
+            padding-left: 20px;
+        }
+
+        .profile-card h1 { font-size: 1.8rem; margin: 0; color: var(--accent); }
+        .tagline { font-size: 0.9rem; color: var(--text-dim); margin-top: 5px; }
+        
+        .specializations { margin-top: 25px; }
+        .badge {
+            display: inline-block;
+            background: #1e293b;
+            color: var(--accent);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin: 4px 2px;
             border: 1px solid #334155;
         }
-        .math-box { background: #000; padding: 15px; border-left: 4px solid #38bdf8; margin: 20px 0; overflow-x: auto; }
-        a { color: #38bdf8; text-decoration: none; font-weight: bold; }
-        a:hover { text-decoration: underline; }
+
+        /* Main Content Styling */
+        .article-card { 
+            background: var(--card-bg); 
+            padding: 40px; 
+            border-radius: 20px; 
+            border: 1px solid #2d3748;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        h2 { font-size: 2rem; margin-top: 0; letter-spacing: -0.5px; }
+        
+        .meta-info {
+            color: var(--text-dim);
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .math-box { 
+            background: var(--code-bg); 
+            padding: 20px; 
+            border-radius: 10px;
+            margin: 30px 0; 
+            border: 1px solid #334155;
+            text-align: center;
+        }
+
+        p { margin-bottom: 20px; color: #cbd5e1; }
+
+        /* Code snippets */
+        code {
+            font-family: 'Fira Code', monospace;
+            background: #2d3748;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 850px) {
+            .layout { grid-template-columns: 1fr; }
+            aside { position: relative; top: 0; }
+        }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <header>
-            <h1>Sushobhit Rajan</h1>
-            <p>Machine Learning & Deep Learning Specialist</p>
-        </header>
+    <div class="layout">
+        <aside>
+            <div class="profile-card">
+                <h1>Sushobhit Rajan</h1>
+                <p class="tagline">Deep Learning Researcher</p>
+                
+                <div class="specializations">
+                    <span class="badge">Mathematics</span>
+                    <span class="badge">Machine Learning</span>
+                    <span class="badge">Neural Networks</span>
+                </div>
+                <p style="font-size: 0.85rem; color: var(--text-dim); margin-top: 20px;">
+                    Focusing on optimization and architectural efficiency in modern LLMs.
+                </p>
+            </div>
+        </aside>
 
         <main class="article-card">
-            <h2>Latest Article: Understanding Gradient Descent</h2>
-            <p>Welcome to my first static page! Since I specialize in ML, here is a quick look at the cost function optimization:</p>
+            <div class="meta-info">Dec 26, 2025 • Optimization Series</div>
+            <h2>The Calculus of Convergence</h2>
+            
+            <p>In Deep Learning, the core of learning is minimizing a loss function $J(\theta)$. We use <strong>Gradient Descent</strong> to iteratively move toward the global minimum. The update rule is defined as:</p>
             
             <div class="math-box">
-                $$ \theta_{j} := \theta_{j} - \alpha \frac{\partial}{\partial \theta_{j}} J(\theta_0, \theta_1) $$
+                $$ \theta_{j} := \theta_{j} - \alpha \frac{\partial}{\partial \theta_{j}} J(\theta) $$
             </div>
 
-            <p>I am currently building this site to share my insights on neural networks and advanced mathematics.</p>
+            <p>Where <code>&alpha;</code> represents the <em>learning rate</em>. Choosing an optimal learning rate is critical; too high and the system diverges, too low and it converges at a sub-optimal speed.</p>
+            
+            <p>Coming next: Backpropagation and the Chain Rule in complex acyclic graphs.</p>
         </main>
     </div>
 
