@@ -3,217 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sushobhit Rajan | Systems & AI Engineer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <title>Sushobhit Rajan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #ffffff;
-            --text: #111111;
-            --secondary: #666666;
-            --accent: #000000;
-            --border: #eeeeee;
-            --link: #0066cc;
+            --text: #000000;
+            --secondary: #4b5563;
         }
 
-        body { 
-            font-family: 'Inter', sans-serif; 
-            background-color: var(--bg); 
-            color: var(--text); 
-            line-height: 1.6; 
+        body, html {
             margin: 0;
             padding: 0;
+            height: 100%;
+            width: 100%;
+            font-family: 'Inter', sans-serif;
         }
 
-        .container { 
-            max-width: 800px; 
-            margin: 80px auto; 
-            padding: 0 32px; 
+        /* Background Image Logic */
+        .bg-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Minimalist tech/abstract light background */
+            background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            filter: brightness(1.1) grayscale(100%) opacity(0.15); /* Makes it very subtle and clean */
+            z-index: -1;
         }
 
-        header { margin-bottom: 60px; }
-
-        h1 { 
-            font-size: 3rem; 
-            margin: 0; 
-            letter-spacing: -1.5px; 
-            font-weight: 800;
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
         }
 
-        .tagline {
-            font-size: 1.25rem;
+        .container {
+            text-align: center;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.8); /* Slight frost effect */
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            letter-spacing: -2px;
+            margin: 0;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .passion {
+            font-size: 1rem;
             color: var(--secondary);
-            margin-top: 10px;
+            margin-top: 15px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
             font-weight: 400;
         }
 
-        section { margin-bottom: 60px; }
-
-        h2 { 
-            font-size: 0.75rem; 
-            text-transform: uppercase; 
-            letter-spacing: 2px; 
-            color: var(--secondary);
-            margin-bottom: 25px;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 8px;
+        .divider {
+            width: 50px;
+            height: 2px;
+            background-color: #000;
+            margin: 40px auto;
         }
 
-        .about-text {
-            font-size: 1.15rem;
-            color: var(--text);
-            max-width: 700px;
-        }
-
-        .highlight { border-bottom: 2px solid #e2e8f0; font-weight: 500; }
-
-        /* Experience List Style */
-        .exp-item {
-            margin-bottom: 40px;
-            display: grid;
-            grid-template-columns: 180px 1fr;
-        }
-
-        .exp-date {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.85rem;
-            color: var(--secondary);
-            padding-top: 4px;
-        }
-
-        .exp-content h3 {
-            margin: 0;
+        .status {
             font-size: 1.1rem;
             font-weight: 600;
-        }
-
-        .exp-company {
-            display: block;
-            font-size: 0.95rem;
-            font-weight: 500;
-            color: var(--secondary);
-            margin-bottom: 8px;
-        }
-
-        .exp-description {
-            font-size: 0.95rem;
-            color: #444;
-        }
-
-        .skills-tag {
-            display: inline-block;
-            background: #f4f4f5;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 0.75rem;
-            font-family: 'JetBrains Mono', monospace;
-            margin-top: 10px;
-            margin-right: 5px;
-        }
-
-        footer {
-            margin-top: 80px;
-            padding-top: 30px;
-            border-top: 1px solid var(--border);
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.9rem;
+            color: var(--text);
+            margin-bottom: 40px;
         }
 
         .links a {
             color: var(--text);
             text-decoration: none;
-            margin-left: 20px;
-            font-weight: 500;
-            border-bottom: 1px solid transparent;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin: 0 20px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
         }
 
-        .links a:hover { border-bottom-color: var(--text); }
+        .links a:hover {
+            border-bottom-color: var(--text);
+            opacity: 0.6;
+        }
 
-        @media (max-width: 650px) {
-            .exp-item { grid-template-columns: 1fr; gap: 10px; }
-            h1 { font-size: 2.2rem; }
-            .container { margin: 40px auto; }
+        @media (max-width: 480px) {
+            h1 { font-size: 2.5rem; }
+            .passion { font-size: 0.8rem; }
         }
     </style>
 </head>
 <body>
 
+    <div class="bg-image"></div>
+
     <div class="container">
-        <header>
-            <h1>Sushobhit Rajan</h1>
-            <p class="tagline">Principal Systems Engineer & ML Specialist</p>
-        </header>
+        <h1>Sushobhit Rajan</h1>
+        <div class="passion">Software Engineering & Machine Learning</div>
+        
+        <div class="divider"></div>
 
-        <section id="about">
-            <h2>About</h2>
-            <p class="about-text">
-                I build high-performance systems where <span class="highlight">Distributed Infrastructure</span> meets <span class="highlight">Artificial Intelligence</span>. Currently at AWS EBS, I focus on storage optimization and performance at global scale. My passion lies in bridging rigorous engineering with deep learning to solve complex, high-throughput architectural challenges.
-            </p>
-        </section>
-
-        <section id="experience">
-            <h2>Experience</h2>
-
-            <div class="exp-item">
-                <div class="exp-date">Mar 2024 — Present</div>
-                <div class="exp-content">
-                    <h3>Senior Software Development Engineer</h3>
-                    <span class="exp-company">Amazon Web Services (AWS) · Seattle</span>
-                    <p class="exp-description">
-                        Leading Storage Optimization, Performance, and Heat Management for <strong>AWS Elastic Block Store (EBS)</strong>. Engineering block storage solutions that power the modern cloud.
-                    </p>
-                    <span class="skills-tag">AWS EBS</span>
-                    <span class="skills-tag">Cloud Storage</span>
-                    <span class="skills-tag">Machine Learning</span>
-                </div>
-            </div>
-
-            <div class="exp-item">
-                <div class="exp-date">Jan 2022 — Mar 2024</div>
-                <div class="exp-content">
-                    <h3>Lead Senior SDE</h3>
-                    <span class="exp-company">Amazon Payment Products</span>
-                    <p class="exp-description">
-                        Architected secure bank partner connectivity and financial services for Co-Branded Credit Cards and ShopWithPoints systems.
-                    </p>
-                </div>
-            </div>
-
-            <div class="exp-item">
-                <div class="exp-date">May 2021 — Jan 2022</div>
-                <div class="exp-content">
-                    <h3>Lead Member of Technical Staff</h3>
-                    <span class="exp-company">Salesforce</span>
-                    <p class="exp-description">
-                        Founding member for Sales Enablement. Integrated <strong>Einstein AI</strong> to analyze and optimize sales communication dynamics for multi-million dollar deals.
-                    </p>
-                    <span class="skills-tag">Sales Cloud</span>
-                    <span class="skills-tag">Einstein AI</span>
-                </div>
-            </div>
-
-            <div class="exp-item">
-                <div class="exp-date">Jul 2015 — Jun 2021</div>
-                <div class="exp-content">
-                    <h3>Senior / Lead Software Engineer</h3>
-                    <span class="exp-company">Flipkart</span>
-                    <p class="exp-description">
-                        Engineered large-scale discovery systems including Personalized Recommendations, Ads, and Seller Ranking services. Winner of the M3 Hackathon for Merchandizing and Monetization.
-                    </p>
-                    <span class="skills-tag">Distributed Systems</span>
-                    <span class="skills-tag">Ranking Algorithms</span>
-                </div>
-            </div>
-        </section>
-
-        <footer>
-            <span style="color: var(--secondary);">© 2025 Sushobhit Rajan</span>
-            <div class="links">
-                <a href="https://www.linkedin.com/in/susrajan/">LinkedIn</a>
-                <a href="mailto:sushobhit.rajan@gmail.com">Email</a>
-            </div>
-        </footer>
-    </div>
-
-</body>
-</html>
+        <p class="status">Coming
