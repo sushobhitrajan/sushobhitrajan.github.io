@@ -3,146 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sushobhit Rajan | Deep Learning Blog</title>
+    <title>Sushobhit Rajan | Tech Blog</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --bg: #0b0f1a;
-            --card-bg: #161b2a;
-            --accent: #38bdf8;
-            --text-main: #f8fafc;
-            --text-dim: #94a3b8;
-            --code-bg: #000000;
+            --bg: #ffffff;
+            --text-main: #1a1a1a;
+            --text-muted: #666666;
+            --accent: #0052ff; /* Tech Blue */
+            --border: #eeeeee;
+            --code-bg: #f4f4f4;
+        }
+
+        /* Dark Mode support */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0a0a0a;
+                --text-main: #ffffff;
+                --text-muted: #a0a0a0;
+                --accent: #4d89ff;
+                --border: #222222;
+                --code-bg: #111111;
+            }
         }
 
         body { 
-            font-family: 'Inter', sans-serif; 
+            font-family: 'Space Grotesk', sans-serif; 
             background-color: var(--bg); 
             color: var(--text-main); 
-            line-height: 1.7; 
+            line-height: 1.6; 
             margin: 0;
-            display: flex;
-            justify-content: center;
+            padding: 0;
         }
 
-        .layout {
-            display: grid;
-            grid-template-columns: 280px 1fr;
-            gap: 40px;
-            max-width: 1100px;
-            width: 100%;
-            padding: 60px 20px;
+        .container { max-width: 750px; margin: 0 auto; padding: 80px 20px; }
+
+        header { 
+            margin-bottom: 100px;
         }
 
-        /* Sidebar Styling */
-        aside {
-            position: sticky;
-            top: 60px;
-            height: fit-content;
+        h1 { font-size: 3rem; margin: 0; font-weight: 700; letter-spacing: -2px; }
+        .sub { color: var(--text-muted); font-size: 1.1rem; margin-top: 10px; }
+
+        nav { margin-top: 30px; border-top: 1px solid var(--border); padding-top: 20px; }
+        nav a { margin-right: 25px; text-decoration: none; color: var(--accent); font-weight: 500; font-size: 0.9rem; text-transform: uppercase; }
+
+        article { margin-bottom: 80px; }
+        .date { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 10px; display: block; }
+        h2 { font-size: 1.8rem; margin: 0 0 15px 0; font-weight: 500; }
+
+        .content-block {
+            background: var(--code-bg);
+            border: 1px solid var(--border);
+            padding: 25px;
+            border-radius: 8px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            margin: 25px 0;
         }
 
-        .profile-card {
-            border-left: 2px solid var(--accent);
-            padding-left: 20px;
-        }
+        p { font-size: 1.1rem; color: var(--text-main); font-weight: 300; }
 
-        .profile-card h1 { font-size: 1.8rem; margin: 0; color: var(--accent); }
-        .tagline { font-size: 0.9rem; color: var(--text-dim); margin-top: 5px; }
-        
-        .specializations { margin-top: 25px; }
-        .badge {
-            display: inline-block;
-            background: #1e293b;
-            color: var(--accent);
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            margin: 4px 2px;
-            border: 1px solid #334155;
-        }
+        footer { margin-top: 100px; padding-top: 40px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.9rem; }
 
-        /* Main Content Styling */
-        .article-card { 
-            background: var(--card-bg); 
-            padding: 40px; 
-            border-radius: 20px; 
-            border: 1px solid #2d3748;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-
-        h2 { font-size: 2rem; margin-top: 0; letter-spacing: -0.5px; }
-        
-        .meta-info {
-            color: var(--text-dim);
-            font-size: 0.85rem;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .math-box { 
-            background: var(--code-bg); 
-            padding: 20px; 
-            border-radius: 10px;
-            margin: 30px 0; 
-            border: 1px solid #334155;
-            text-align: center;
-        }
-
-        p { margin-bottom: 20px; color: #cbd5e1; }
-
-        /* Code snippets */
-        code {
-            font-family: 'Fira Code', monospace;
-            background: #2d3748;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-size: 0.9em;
-        }
-
-        @media (max-width: 850px) {
-            .layout { grid-template-columns: 1fr; }
-            aside { position: relative; top: 0; }
-        }
+        /* Hover effect */
+        a:hover { opacity: 0.7; }
     </style>
 </head>
 <body>
 
-    <div class="layout">
-        <aside>
-            <div class="profile-card">
-                <h1>Sushobhit Rajan</h1>
-                <p class="tagline">Deep Learning Researcher</p>
+    <div class="container">
+        <header>
+            <h1>Sushobhit Rajan</h1>
+            <p class="sub">Software Engineer & Tech Enthusiast</p>
+            <nav>
+                <a href="#">Articles</a>
+                <a href="#">Projects</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            <article>
+                <span class="date">DECEMBER 2025 // 01</span>
+                <h2>Scalable System Architecture</h2>
+                <p>Building for the next million users requires a shift from monolithic thinking to distributed microservices. Here is a sample of the configuration logic I’m currently exploring:</p>
                 
-                <div class="specializations">
-                    <span class="badge">Mathematics</span>
-                    <span class="badge">Machine Learning</span>
-                    <span class="badge">Neural Networks</span>
+                <div class="content-block">
+                    // Configuration Interface<br>
+                    export interface SystemConfig {<br>
+                    &nbsp;&nbsp;clusterId: string;<br>
+                    &nbsp;&nbsp;nodes: number;<br>
+                    &nbsp;&nbsp;autoScale: boolean;<br>
+                    }
                 </div>
-                <p style="font-size: 0.85rem; color: var(--text-dim); margin-top: 20px;">
-                    Focusing on optimization and architectural efficiency in modern LLMs.
-                </p>
-            </div>
-        </aside>
 
-        <main class="article-card">
-            <div class="meta-info">Dec 26, 2025 • Optimization Series</div>
-            <h2>The Calculus of Convergence</h2>
-            
-            <p>In Deep Learning, the core of learning is minimizing a loss function $J(\theta)$. We use <strong>Gradient Descent</strong> to iteratively move toward the global minimum. The update rule is defined as:</p>
-            
-            <div class="math-box">
-                $$ \theta_{j} := \theta_{j} - \alpha \frac{\partial}{\partial \theta_{j}} J(\theta) $$
-            </div>
+                <p>The goal is to minimize latency while maximizing fault tolerance across multi-regional deployments.</p>
+            </article>
 
-            <p>Where <code>&alpha;</code> represents the <em>learning rate</em>. Choosing an optimal learning rate is critical; too high and the system diverges, too low and it converges at a sub-optimal speed.</p>
-            
-            <p>Coming next: Backpropagation and the Chain Rule in complex acyclic graphs.</p>
+            <article>
+                <span class="date">NOVEMBER 2025 // 14</span>
+                <h2>The Art of Clean Code</h2>
+                <p>Code is read more often than it is written. Prioritizing clarity over cleverness is the hallmark of a senior engineer.</p>
+            </article>
         </main>
+
+        <footer>
+            &copy; 2025 Sushobhit Rajan. Built with minimalism in mind.
+        </footer>
     </div>
 
 </body>
