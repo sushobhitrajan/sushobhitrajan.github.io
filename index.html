@@ -3,114 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sushobhit Rajan</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --text: #000000;
-            --secondary: #4b5563;
-        }
-
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            width: 100%;
-            font-family: 'Inter', sans-serif;
-        }
-
-        /* Background Image Logic */
-        .bg-image {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            /* Minimalist tech/abstract light background */
-            background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
-            filter: brightness(1.1) grayscale(100%) opacity(0.15); /* Makes it very subtle and clean */
-            z-index: -1;
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #ffffff;
-        }
-
-        .container {
-            text-align: center;
-            padding: 40px;
-            background: rgba(255, 255, 255, 0.8); /* Slight frost effect */
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            max-width: 600px;
-        }
-
-        h1 {
-            font-size: 3.5rem;
-            letter-spacing: -2px;
-            margin: 0;
-            font-weight: 700;
-            color: var(--text);
-        }
-
-        .passion {
-            font-size: 1rem;
-            color: var(--secondary);
-            margin-top: 15px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            font-weight: 400;
-        }
-
-        .divider {
-            width: 50px;
-            height: 2px;
-            background-color: #000;
-            margin: 40px auto;
-        }
-
-        .status {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--text);
-            margin-bottom: 40px;
-        }
-
-        .links a {
-            color: var(--text);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin: 0 20px;
-            padding-bottom: 5px;
-            border-bottom: 2px solid transparent;
-            transition: all 0.3s ease;
-        }
-
-        .links a:hover {
-            border-bottom-color: var(--text);
-            opacity: 0.6;
-        }
-
-        @media (max-width: 480px) {
-            h1 { font-size: 2.5rem; }
-            .passion { font-size: 0.8rem; }
-        }
-    </style>
+    <meta name="description" content="Personal website of Sushobhit Rajan - Software Engineering & Machine Learning">
+    <title>Sushobhit Rajan - Home</title>
+    
+    <!-- External Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- JavaScript -->
+    <script src="js/main.js" defer></script>
 </head>
 <body>
-
     <div class="bg-image"></div>
 
-    <div class="container">
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="tech-blocks.html">Tech Blocks</a></li>
+                <li><a href="guidelines.html">Guidelines</a></li>
+                <li><a href="articles.html">Articles</a></li>
+            </ul>
+            <a href="index.html" class="profile-image">
+                <img src="assets/images/profile_icon.JPG" alt="SR" onerror="this.style.display='none'">
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container centered">
         <h1>Sushobhit Rajan</h1>
         <div class="passion">Software Engineering & Machine Learning</div>
         
         <div class="divider"></div>
 
-        <p class="status">Coming
+        <p class="status">Welcome to my personal website</p>
+        <p style="color: var(--secondary); line-height: 1.6;">
+            Explore tech blocks, software engineering guidelines, and tech design articles.
+        </p>
+
+        <div class="links">
+            <a href="tech-blocks.html">Tech Blocks</a>
+            <a href="guidelines.html">Guidelines</a>
+            <a href="articles.html">Articles</a>
+        </div>
+
+        <div class="links" style="margin-top: 30px;">
+            <a href="https://www.linkedin.com/in/susrajan/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+    </div>
+</body>
+</html>

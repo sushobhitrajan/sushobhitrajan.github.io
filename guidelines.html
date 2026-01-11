@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Software Engineering Guidelines by Sushobhit Rajan">
+    <title>Software Engineering Guidelines - Sushobhit Rajan</title>
+    
+    <!-- External Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- JavaScript -->
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <div class="bg-image"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tech-blocks.html">Tech Blocks</a></li>
+                <li><a href="guidelines.html" class="active">Guidelines</a></li>
+                <li><a href="articles.html">Articles</a></li>
+            </ul>
+            <a href="index.html" class="profile-image">
+                <img src="assets/images/profile_icon.JPG" alt="SR" onerror="this.style.display='none'">
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="page-header">
+            <h1>Software Engineering Guidelines</h1>
+            <p>Best practices, principles, and guidelines for building quality software</p>
+        </div>
+
+        <div class="guidelines-section">
+            <h3>Code Quality</h3>
+            <ul>
+                <li>Write clean, readable, and maintainable code</li>
+                <li>Follow consistent naming conventions</li>
+                <li>Keep functions small and focused on a single responsibility</li>
+                <li>Write self-documenting code with meaningful variable names</li>
+                <li>Remove dead code and unused imports</li>
+            </ul>
+        </div>
+
+        <div class="guidelines-section">
+            <h3>Version Control</h3>
+            <ul>
+                <li>Commit often with clear, descriptive messages</li>
+                <li>Use meaningful branch names (feature/, bugfix/, hotfix/)</li>
+                <li>Keep commits atomic and focused on a single change</li>
+                <li>Review code before merging to main/master</li>
+                <li>Write commit messages in imperative mood</li>
+            </ul>
+        </div>
+
+        <div class="guidelines-section">
+            <h3>Testing</h3>
+            <ul>
+                <li>Write tests for critical functionality</li>
+                <li>Aim for good test coverage, but focus on quality over quantity</li>
+                <li>Use descriptive test names that explain what is being tested</li>
+                <li>Follow the Arrange-Act-Assert pattern</li>
+                <li>Test edge cases and error conditions</li>
+            </ul>
+        </div>
+
+        <div class="guidelines-section">
+            <h3>Documentation</h3>
+            <ul>
+                <li>Document complex algorithms and business logic</li>
+                <li>Keep README files up to date</li>
+                <li>Document API endpoints and their parameters</li>
+                <li>Include examples in documentation</li>
+                <li>Update documentation when code changes</li>
+            </ul>
+        </div>
+
+        <div class="guidelines-section">
+            <h3>Performance</h3>
+            <ul>
+                <li>Profile before optimizing</li>
+                <li>Optimize critical paths first</li>
+                <li>Consider caching strategies</li>
+                <li>Monitor and measure performance improvements</li>
+                <li>Balance performance with code readability</li>
+            </ul>
+        </div>
+
+        <div class="guidelines-section">
+            <h3>Security</h3>
+            <ul>
+                <li>Never commit secrets or API keys to version control</li>
+                <li>Validate and sanitize all user inputs</li>
+                <li>Use parameterized queries to prevent SQL injection</li>
+                <li>Keep dependencies up to date</li>
+                <li>Follow the principle of least privilege</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

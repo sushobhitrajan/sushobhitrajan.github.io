@@ -1,0 +1,22 @@
+{
+  "name": "sushobhitrajan.github.io",
+  "version": "1.0.0",
+  "description": "Personal website of Sushobhit Rajan - Software Engineering & Machine Learning",
+  "main": "js/main.js",
+  "scripts": {
+    "dev": "echo 'Running development server - use a local server like: python -m http.server 8000'",
+    "test": "echo 'No tests specified'"
+  },
+  "keywords": [
+    "personal-website",
+    "portfolio",
+    "machine-learning",
+    "software-engineering"
+  ],
+  "author": "Sushobhit Rajan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sushobhitrajan/sushobhitrajan.github.io.git"
+  }
+}

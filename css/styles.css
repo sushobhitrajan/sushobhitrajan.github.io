@@ -1,0 +1,432 @@
+/* ============================================
+   CSS Variables
+   ============================================ */
+:root {
+    --text: #000000;
+    --secondary: #4b5563;
+    --bg-overlay: rgba(255, 255, 255, 0.8);
+    --border-color: #e5e7eb;
+    --hover-color: #f3f4f6;
+}
+
+/* ============================================
+   Base Styles
+   ============================================ */
+body, html {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    padding-top: 80px;
+}
+
+/* ============================================
+   Background Image
+   ============================================ */
+.bg-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(1.1) grayscale(100%) opacity(0.15);
+    z-index: -1;
+}
+
+/* ============================================
+   Navigation
+   ============================================ */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--bg-overlay);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
+    padding: 1rem 2rem;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    border-bottom-color: var(--text);
+    opacity: 0.8;
+}
+
+/* ============================================
+   Profile Image
+   ============================================ */
+.profile-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--text);
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    background: var(--secondary);
+    color: white;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-decoration: none;
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.profile-image:hover {
+    transform: translateY(-50%) scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 0%;
+    display: block;
+    position: absolute;
+    top: -5%;
+    left: 0;
+    z-index: 2;
+    transform: scale(2.0);
+    transform-origin: center top;
+}
+
+/* Show initials fallback "SR" when image doesn't load */
+.profile-image::after {
+    content: "SR";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    pointer-events: none;
+    color: white;
+    font-weight: 600;
+}
+
+/* When image loads successfully, it covers the fallback */
+.profile-image:not(.image-error) img[src]:not([src=""]):not([style*="display: none"]) {
+    z-index: 2;
+}
+
+/* ============================================
+   Container
+   ============================================ */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.container.centered {
+    text-align: center;
+    padding: 40px;
+    background: var(--bg-overlay);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    max-width: 600px;
+}
+
+/* ============================================
+   Typography
+   ============================================ */
+h1 {
+    font-size: 3.5rem;
+    letter-spacing: -2px;
+    margin: 0 0 1rem 0;
+    font-weight: 700;
+    color: var(--text);
+}
+
+h2 {
+    font-size: 2.5rem;
+    letter-spacing: -1px;
+    margin: 0 0 1rem 0;
+    font-weight: 700;
+    color: var(--text);
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem 0;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.passion {
+    font-size: 1rem;
+    color: var(--secondary);
+    margin-top: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.status {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 40px;
+}
+
+/* ============================================
+   Divider
+   ============================================ */
+.divider {
+    width: 50px;
+    height: 2px;
+    background-color: #000;
+    margin: 40px auto;
+}
+
+/* ============================================
+   Links
+   ============================================ */
+.links {
+    margin-top: 20px;
+}
+
+.links a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin: 0 20px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.links a:hover {
+    border-bottom-color: var(--text);
+    opacity: 0.6;
+}
+
+/* ============================================
+   Tech Blocks / Cards
+   ============================================ */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.tech-card {
+    background: var(--bg-overlay);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: var(--text);
+    display: block;
+}
+
+.tech-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-color: var(--text);
+}
+
+.tech-card h3 {
+    margin-top: 0;
+    font-size: 1.25rem;
+}
+
+.tech-card p {
+    color: var(--secondary);
+    margin: 0.5rem 0 0 0;
+    line-height: 1.6;
+}
+
+/* ============================================
+   Articles / Blog
+   ============================================ */
+.articles-list {
+    margin-top: 2rem;
+}
+
+.article-item {
+    background: var(--bg-overlay);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.article-item:hover {
+    transform: translateX(5px);
+    border-color: var(--text);
+}
+
+.article-item h3 {
+    margin-top: 0;
+}
+
+.article-item .meta {
+    color: var(--secondary);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.article-item p {
+    color: var(--secondary);
+    line-height: 1.6;
+}
+
+/* ============================================
+   Guidelines
+   ============================================ */
+.guidelines-section {
+    background: var(--bg-overlay);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid var(--border-color);
+}
+
+.guidelines-section h3 {
+    margin-top: 0;
+}
+
+.guidelines-section ul,
+.guidelines-section ol {
+    line-height: 1.8;
+    color: var(--secondary);
+}
+
+.guidelines-section li {
+    margin-bottom: 0.5rem;
+}
+
+/* ============================================
+   Content Page Layout
+   ============================================ */
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+}
+
+.page-header h1 {
+    margin-bottom: 0.5rem;
+}
+
+.page-header p {
+    color: var(--secondary);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+@media (max-width: 768px) {
+    nav {
+        padding: 1rem;
+    }
+
+    .nav-container {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+        position: relative;
+    }
+
+    .nav-links {
+        gap: 0.75rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex: 1;
+    }
+
+    .profile-image {
+        width: 40px;
+        height: 40px;
+        right: 1rem;
+    }
+
+    body {
+        padding-top: 120px;
+    }
+
+    h1 { 
+        font-size: 2.5rem; 
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 { 
+        font-size: 2rem; 
+    }
+    .passion { 
+        font-size: 0.8rem; 
+    }
+}
