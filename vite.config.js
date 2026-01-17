@@ -10,14 +10,7 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets',
     sourcemap: true,
-    minify: 'terser',
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['./src/utils/animations.js', './src/utils/lazyLoad.js']
-        }
-      }
-    }
+    minify: 'terser'
   },
   server: {
     port: 3000,
