@@ -1,0 +1,140 @@
+{
+  "categories": [
+    {
+      "name": "Languages",
+      "icon": "💻",
+      "skills": [
+        {
+          "name": "JavaScript",
+          "icon": "🟨",
+          "proficiency": "expert",
+          "yearsOfExperience": 5,
+          "description": "Full-stack development with modern ES6+"
+        },
+        {
+          "name": "Python",
+          "icon": "🐍",
+          "proficiency": "expert",
+          "yearsOfExperience": 6,
+          "description": "Machine learning and data processing"
+        },
+        {
+          "name": "TypeScript",
+          "icon": "🔷",
+          "proficiency": "advanced",
+          "yearsOfExperience": 4,
+          "description": "Type-safe application development"
+        },
+        {
+          "name": "Java",
+          "icon": "☕",
+          "proficiency": "advanced",
+          "yearsOfExperience": 3,
+          "description": "Enterprise application development"
+        }
+      ]
+    },
+    {
+      "name": "Frameworks",
+      "icon": "⚛️",
+      "skills": [
+        {
+          "name": "React",
+          "icon": "⚛️",
+          "proficiency": "expert",
+          "yearsOfExperience": 5,
+          "description": "Modern UI development"
+        },
+        {
+          "name": "Node.js",
+          "icon": "🟢",
+          "proficiency": "expert",
+          "yearsOfExperience": 5,
+          "description": "Backend API development"
+        },
+        {
+          "name": "TensorFlow",
+          "icon": "🧠",
+          "proficiency": "advanced",
+          "yearsOfExperience": 3,
+          "description": "Machine learning models"
+        },
+        {
+          "name": "Express",
+          "icon": "🚂",
+          "proficiency": "expert",
+          "yearsOfExperience": 4,
+          "description": "RESTful API development"
+        }
+      ]
+    },
+    {
+      "name": "Tools",
+      "icon": "🛠️",
+      "skills": [
+        {
+          "name": "Git",
+          "icon": "📦",
+          "proficiency": "expert",
+          "yearsOfExperience": 6,
+          "description": "Version control and collaboration"
+        },
+        {
+          "name": "Docker",
+          "icon": "🐳",
+          "proficiency": "advanced",
+          "yearsOfExperience": 4,
+          "description": "Containerization and deployment"
+        },
+        {
+          "name": "VS Code",
+          "icon": "💙",
+          "proficiency": "expert",
+          "yearsOfExperience": 5,
+          "description": "Primary development environment"
+        },
+        {
+          "name": "Webpack",
+          "icon": "📦",
+          "proficiency": "advanced",
+          "yearsOfExperience": 4,
+          "description": "Module bundling and optimization"
+        }
+      ]
+    },
+    {
+      "name": "Platforms",
+      "icon": "☁️",
+      "skills": [
+        {
+          "name": "AWS",
+          "icon": "☁️",
+          "proficiency": "advanced",
+          "yearsOfExperience": 4,
+          "description": "Cloud infrastructure and services"
+        },
+        {
+          "name": "GitHub",
+          "icon": "🐙",
+          "proficiency": "expert",
+          "yearsOfExperience": 6,
+          "description": "Code hosting and CI/CD"
+        },
+        {
+          "name": "Linux",
+          "icon": "🐧",
+          "proficiency": "advanced",
+          "yearsOfExperience": 5,
+          "description": "Server administration"
+        },
+        {
+          "name": "Firebase",
+          "icon": "🔥",
+          "proficiency": "advanced",
+          "yearsOfExperience": 3,
+          "description": "Backend as a service"
+        }
+      ]
+    }
+  ]
+}

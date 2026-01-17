@@ -10,6 +10,7 @@ import './styles/main.css';
 import { Navigation } from './components/Navigation.js';
 import { Hero } from './components/Hero.js';
 import { AboutSection } from './components/AboutSection.js';
+import { SkillsSection } from './components/SkillsSection.js';
 
 // Application initialization
 console.log('Portfolio System Initialized');
@@ -33,15 +34,9 @@ document.getElementById('app').innerHTML = `
   <main>
     <!-- Hero section will be inserted here by the Hero component -->
     <!-- About section will be inserted here by the AboutSection component -->
+    <!-- Skills section will be inserted here by the SkillsSection component -->
 
     <!-- Placeholder sections for testing scroll -->
-    <section id="skills" style="min-height: 100vh; padding: var(--space-8) var(--space-4); display: flex; align-items: center; justify-content: center; background: var(--color-background-secondary);">
-      <div class="container">
-        <h2>Skills Section</h2>
-        <p>This is a placeholder for the Skills section.</p>
-      </div>
-    </section>
-
     <section id="experience" style="min-height: 100vh; padding: var(--space-8) var(--space-4); display: flex; align-items: center; justify-content: center;">
       <div class="container">
         <h2>Experience Section</h2>
@@ -80,5 +75,12 @@ const aboutSection = new AboutSection({});
 // Load about data from JSON
 aboutSection.loadData('/src/data/about.json').catch(error => {
   console.error('Failed to load about data:', error);
+});
+
+// Initialize Skills Section
+const skillsSection = new SkillsSection({});
+// Load skills data from JSON
+skillsSection.loadData('/src/data/skills.json').catch(error => {
+  console.error('Failed to load skills data:', error);
 });
 
