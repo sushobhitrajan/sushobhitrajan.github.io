@@ -8,6 +8,7 @@ dist/
 build/
 *.min.js
 *.min.css
+.vite/
 
 # IDE
 .vscode/
@@ -23,7 +24,14 @@ Thumbs.db
 # Environment
 .env
 .env.local
+.env.production
 
 # Logs
 *.log
 npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Testing
+coverage/
+.nyc_output/

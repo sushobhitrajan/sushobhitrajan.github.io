@@ -1,184 +1,206 @@
-# Sushobhit Rajan - Personal Website
+# Sushobhit Rajan - Developer Portfolio
 
-Personal website and technical blog showcasing Software Engineering, Machine Learning, and Tech Design articles.
+Modern developer portfolio with a clean white theme, flawless touch experience, and component-based architecture.
 
-🌐 **Live Site**: [sushobhitrajan.in](https://sushobhitrajan.in) | [sushobhitrajan.github.io](https://sushobhitrajan.github.io)
+## 🚀 Quick Start
 
-## 📋 Features
+### Deploy Now
 
-- **Tech Blocks**: Curated technology resources, tools, and frameworks
-- **Software Engineering Guidelines**: Best practices and principles for building quality software
-- **Tech Design Articles**: Insights on software design, architecture, and technology
-- **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
-- **Clean & Modern UI**: Minimalist design with smooth animations
-- **Fast Loading**: Lightweight HTML, CSS, and JavaScript for optimal performance
+```bash
+npm install
+npm run build:verify
+git push origin main
+```
 
-## 🛠️ Tech Stack
+See [QUICK_START_DEPLOYMENT.md](QUICK_START_DEPLOYMENT.md) for details.
 
-This website uses a simple, modern tech stack:
+### Develop Locally
 
-- **HTML5**: Semantic markup for content structure
-- **CSS3**: Modern styling with CSS variables and Flexbox/Grid
-- **JavaScript (Vanilla)**: Interactive features and navigation
-- **GitHub Pages**: Hosting and deployment
-- **Custom Domain**: [sushobhitrajan.in](https://sushobhitrajan.in)
+```bash
+npm install
+npm run dev
+```
 
-## 📁 Project Structure
+Visit http://localhost:3000
+
+## 📚 Documentation
+
+- **[Quick Start Deployment](QUICK_START_DEPLOYMENT.md)** - Deploy in 3 steps
+- **[Deployment Guide](DEPLOYMENT.md)** - Comprehensive deployment documentation
+- **[Production Testing](PRODUCTION_TESTING.md)** - Testing checklist before deployment
+- **[Setup Guide](SETUP.md)** - Initial project setup details
+- **[Test Instructions](TEST_INSTRUCTIONS.md)** - Running tests
+
+## Project Structure
 
 ```
 sushobhitrajan.github.io/
-├── index.html              # Homepage
-├── tech-blocks.html        # Tech Blocks page
-├── guidelines.html         # Software Engineering Guidelines
-├── articles.html           # Tech Design Articles
-├── css/
-│   └── styles.css         # All stylesheets
-├── js/
-│   └── main.js            # JavaScript functionality
-├── assets/
-│   ├── images/            # Image assets
-│   └── icons/             # Icon assets
-├── CNAME                   # Custom domain configuration
-├── package.json            # Project metadata
-└── README.md              # This file
+├── src/                    # Source files
+│   ├── components/         # Reusable UI components
+│   ├── styles/            # Modular CSS
+│   │   ├── base/          # Reset, variables, typography
+│   │   ├── components/    # Component-specific styles
+│   │   └── layouts/       # Layout utilities
+│   ├── utils/             # Utility functions
+│   ├── data/              # Content data (JSON)
+│   ├── pages/             # Page-specific code
+│   ├── test/              # Test files
+│   └── main.js            # Application entry point
+├── public/                # Static assets
+│   ├── images/            # Images
+│   ├── icons/             # Icons and SVGs
+│   └── fonts/             # Custom fonts
+├── .github/workflows/     # GitHub Actions
+├── scripts/               # Build and utility scripts
+├── dist/                  # Build output (gitignored)
+├── index.html             # Main HTML entry
+├── vite.config.js         # Vite configuration
+├── vitest.config.js       # Test configuration
+└── package.json           # Project dependencies
 ```
 
-## 🚀 Getting Started
+## Development
 
 ### Prerequisites
 
-- A web browser (Chrome, Firefox, Safari, or Edge)
-- Git (optional, for cloning the repository)
-- Python 3 (optional, for local development server)
+- Node.js (v18 or higher)
+- npm or yarn
 
-### Running Locally
+### Installation
 
-1. **Clone the repository** (if you have Git):
-   ```bash
-   git clone https://github.com/sushobhitrajan/sushobhitrajan.github.io.git
-   cd sushobhitrajan.github.io
-   ```
-
-2. **Open directly in browser**:
-   - Simply open `index.html` in your browser, or
-   - Drag and drop `index.html` into your browser
-
-3. **Using a local development server** (recommended):
-   ```bash
-   # Python 3
-   python3 -m http.server 8000
-   
-   # Then open: http://localhost:8000
-   ```
-
-   ```bash
-   # Node.js (if you have it installed)
-   npx http-server -p 8000
-   ```
-
-### Viewing the Website
-
-Once the server is running, open your browser and navigate to:
-- **Local**: `http://localhost:8000`
-- **Live**: [https://sushobhitrajan.in](https://sushobhitrajan.in)
-
-## 📝 Pages
-
-### Homepage (`index.html`)
-Welcome page with navigation to all sections.
-
-### Tech Blocks (`tech-blocks.html`)
-Curated collection of technology resources organized in card layouts. Features various tech stacks and tools.
-
-### Guidelines (`guidelines.html`)
-Software engineering best practices covering:
-- Code Quality
-- Version Control
-- Testing
-- Documentation
-- Performance
-- Security
-
-### Articles (`articles.html`)
-Tech design articles and blog posts about software architecture, design patterns, and technology insights.
-
-## 🎨 Customization
-
-### Adding Content
-
-1. **Tech Blocks**: Edit `tech-blocks.html` and add new cards in the `.tech-grid` section
-2. **Guidelines**: Update sections in `guidelines.html`
-3. **Articles**: Add new article items in `articles.html`
-
-### Styling
-
-- **Colors**: Modify CSS variables in `css/styles.css` (under `:root`)
-- **Fonts**: Change the Google Fonts import in the HTML `<head>`
-- **Layout**: Adjust container max-widths and spacing in CSS
-
-### Adding Images
-
-Place images in `assets/images/` and reference them:
-```html
-<img src="assets/images/your-image.jpg" alt="Description">
+```bash
+npm install
 ```
 
-## 🌐 Deployment
+### Development Server
 
-This site is automatically deployed to GitHub Pages:
+```bash
+npm run dev
+```
 
-1. Push changes to the `main` branch
-2. GitHub Pages automatically rebuilds the site
-3. Changes go live at:
-   - Custom domain: [sushobhitrajan.in](https://sushobhitrajan.in)
-   - GitHub Pages: [sushobhitrajan.github.io](https://sushobhitrajan.github.io)
+Starts the Vite development server at `http://localhost:3000` with hot module replacement.
 
-### Custom Domain
+### Build for Production
 
-The site uses a custom domain configured via the `CNAME` file. To update:
-1. Edit `CNAME` with your domain
-2. Configure DNS settings with your domain provider
-3. Ensure DNS points to GitHub Pages
+```bash
+npm run build
+```
 
-## 🔧 Development
+Builds the project for production to the `dist/` directory with optimizations and minification.
 
-### File Organization
+### Preview Production Build
 
-- Keep HTML semantic and accessible
-- CSS organized by sections (see comments in `styles.css`)
-- JavaScript functions are modular and commented
-- Images optimized for web
+```bash
+npm run preview
+```
 
-### Best Practices
+Previews the production build locally at `http://localhost:4173`.
 
-- Validate HTML using W3C Validator
-- Test responsive design on multiple devices
-- Optimize images before adding to `assets/images/`
-- Keep CSS organized with clear section comments
+### Testing
 
-## 📚 Resources
+```bash
+# Run all tests
+npm test
 
-- [GitHub Pages Documentation](https://docs.github.com/en/pages)
-- [MDN Web Docs](https://developer.mozilla.org/)
-- [W3C Web Standards](https://www.w3.org/standards/)
+# Run tests in watch mode
+npm run test:watch
 
-## 📄 License
+# Run tests with UI
+npm run test:ui
+```
 
-This project is open source and available under the [MIT License](LICENSE).
+### Code Quality
 
-## 👤 Author
+```bash
+# Run ESLint
+npm run lint
 
-**Sushobhit Rajan**
-- Website: [sushobhitrajan.in](https://sushobhitrajan.in)
-- LinkedIn: [linkedin.com/in/susrajan](https://www.linkedin.com/in/susrajan/)
-- GitHub: [@sushobhitrajan](https://github.com/sushobhitrajan)
+# Format code with Prettier
+npm run format
 
-## 🙏 Acknowledgments
+# Check formatting
+npm run format:check
+```
 
-- Background image from [Unsplash](https://unsplash.com)
-- Font: [Inter](https://fonts.google.com/specimen/Inter) from Google Fonts
-- Inspired by modern minimalist web design
+### Build Verification
+
+```bash
+# Verify build output
+npm run verify-build
+
+# Build and verify in one command
+npm run build:verify
+```
+
+## Deployment
+
+### Automatic Deployment
+
+Push to the `main` branch to automatically deploy via GitHub Actions:
+
+```bash
+git push origin main
+```
+
+The site will be live at: **https://sushobhitrajan.github.io**
+
+### Manual Deployment
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for manual deployment instructions.
+
+## Technology Stack
+
+- **Build Tool**: Vite 5.x
+- **Styling**: CSS with CSS Custom Properties
+- **JavaScript**: Vanilla ES6+
+- **Testing**: Vitest + fast-check (property-based testing)
+- **Content**: JSON for structured data
+- **Deployment**: GitHub Pages with GitHub Actions
+- **CI/CD**: Automated testing and deployment
+
+## Features
+
+- ✨ Modern white theme inspired by Cursor
+- 📱 Flawless touch experience (44x44px touch targets)
+- 🎨 Component-based architecture
+- ⚡ Fast build times with Vite
+- 🎯 Performance-optimized (Lighthouse score > 90)
+- ♿ WCAG 2.1 AA compliant
+- 📦 Modular CSS architecture
+- 🧪 Property-based testing with fast-check
+- 🚀 Automatic deployment with GitHub Actions
+- 📏 8px spacing grid system
+- 🎭 Smooth animations with reduced motion support
+
+## Scripts Reference
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm test` | Run tests once |
+| `npm run test:watch` | Run tests in watch mode |
+| `npm run test:ui` | Run tests with UI |
+| `npm run verify-build` | Verify build output |
+| `npm run build:verify` | Build and verify |
+| `npm run lint` | Run ESLint |
+| `npm run format` | Format code with Prettier |
+| `npm run format:check` | Check code formatting |
+
+## Contributing
+
+1. Create a feature branch
+2. Make your changes
+3. Run tests: `npm test`
+4. Run linting: `npm run lint`
+5. Build and verify: `npm run build:verify`
+6. Submit a pull request
+
+## License
+
+MIT License - see LICENSE file for details
 
 ---
 
-**Built with ❤️ using HTML, CSS, and JavaScript**
+**Live Site:** https://sushobhitrajan.github.io

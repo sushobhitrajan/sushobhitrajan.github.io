@@ -1,0 +1,20 @@
+/**
+ * Main CSS entry point
+ * Imports all style modules in the correct order
+ */
+
+/* Base styles */
+@import './base/reset.css';
+@import './base/variables.css';
+@import './base/typography.css';
+@import './base/utilities.css';
+
+/* Layout styles */
+@import './layouts/grid.css';
+@import './layouts/container.css';
+
+/* Component styles will be imported here as they are created */
+/* @import './components/navigation.css'; */
+/* @import './components/hero.css'; */
+/* @import './components/card.css'; */
+/* @import './components/footer.css'; */

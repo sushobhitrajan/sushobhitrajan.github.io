@@ -1,59 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal website of Sushobhit Rajan - Software Engineering & Machine Learning">
-    <title>Sushobhit Rajan - Home</title>
-    
-    <!-- External Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="css/styles.css">
-    
-    <!-- JavaScript -->
-    <script src="js/main.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal portfolio of Sushobhit Rajan - Software Engineering & Machine Learning">
+  <meta name="author" content="Sushobhit Rajan">
+  <title>Sushobhit Rajan | Software Engineering & Machine Learning</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+  <!-- Preconnect to fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
-    <div class="bg-image"></div>
+  <!-- Main application container -->
+  <div id="app">
+    <h1>Portfolio System</h1>
+    <p>Loading...</p>
+  </div>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="tech-blocks.html">Tech Blocks</a></li>
-                <li><a href="guidelines.html">Guidelines</a></li>
-                <li><a href="articles.html">Articles</a></li>
-            </ul>
-            <a href="index.html" class="profile-image">
-                <img src="assets/images/profile_icon.JPG" alt="SR" onerror="this.style.display='none'">
-            </a>
-        </div>
-    </nav>
-
-    <!-- Main Content -->
-    <div class="container centered">
-        <h1>Sushobhit Rajan</h1>
-        <div class="passion">Software Engineering & Machine Learning</div>
-        
-        <div class="divider"></div>
-
-        <p class="status">Welcome to my personal website</p>
-        <p style="color: var(--secondary); line-height: 1.6;">
-            Explore tech blocks, software engineering guidelines, and tech design articles.
-        </p>
-
-        <div class="links">
-            <a href="tech-blocks.html">Tech Blocks</a>
-            <a href="guidelines.html">Guidelines</a>
-            <a href="articles.html">Articles</a>
-        </div>
-
-        <div class="links" style="margin-top: 30px;">
-            <a href="https://www.linkedin.com/in/susrajan/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </div>
-    </div>
+  <!-- Main JavaScript entry point -->
+  <script type="module" src="/src/main.js"></script>
 </body>
 </html>
