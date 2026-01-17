@@ -15,6 +15,6 @@
 
 /* Component styles */
 @import './components/navigation.css';
-/* @import './components/hero.css'; */
+@import './components/hero.css';
 /* @import './components/card.css'; */
 /* @import './components/footer.css'; */
