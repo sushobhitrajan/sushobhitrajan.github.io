@@ -13,8 +13,8 @@
 @import './layouts/grid.css';
 @import './layouts/container.css';
 
-/* Component styles will be imported here as they are created */
-/* @import './components/navigation.css'; */
+/* Component styles */
+@import './components/navigation.css';
 /* @import './components/hero.css'; */
 /* @import './components/card.css'; */
 /* @import './components/footer.css'; */
