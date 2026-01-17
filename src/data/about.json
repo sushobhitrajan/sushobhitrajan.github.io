@@ -1,0 +1,22 @@
+{
+  "name": "Sushobhit Rajan",
+  "tagline": "Software Engineering & Machine Learning",
+  "photo": "/images/profile.jpg",
+  "bio": [
+    "I'm a software engineer passionate about building elegant solutions to complex problems. With expertise in full-stack development and machine learning, I create applications that are both powerful and user-friendly.",
+    "Currently focused on modern web technologies and AI-powered applications. I believe in writing clean, maintainable code and sharing knowledge with the developer community.",
+    "When I'm not coding, you'll find me exploring new technologies, contributing to open source, or writing about software engineering best practices."
+  ],
+  "highlights": [
+    "5+ years of software engineering experience",
+    "Specialized in React, Node.js, and Python",
+    "Open source contributor",
+    "Technical writer and mentor"
+  ],
+  "resumeLink": "/downloads/resume.pdf",
+  "currentFocus": [
+    "Modern web architecture",
+    "Machine learning applications",
+    "Developer experience"
+  ]
+}

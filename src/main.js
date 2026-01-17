@@ -9,6 +9,7 @@ import './styles/main.css';
 // Import components
 import { Navigation } from './components/Navigation.js';
 import { Hero } from './components/Hero.js';
+import { AboutSection } from './components/AboutSection.js';
 
 // Application initialization
 console.log('Portfolio System Initialized');
@@ -31,15 +32,9 @@ const navigation = new Navigation({
 document.getElementById('app').innerHTML = `
   <main>
     <!-- Hero section will be inserted here by the Hero component -->
+    <!-- About section will be inserted here by the AboutSection component -->
 
     <!-- Placeholder sections for testing scroll -->
-    <section id="about" style="min-height: 100vh; padding: var(--space-8) var(--space-4); display: flex; align-items: center; justify-content: center;">
-      <div class="container">
-        <h2>About Section</h2>
-        <p>This is a placeholder for the About section.</p>
-      </div>
-    </section>
-
     <section id="skills" style="min-height: 100vh; padding: var(--space-8) var(--space-4); display: flex; align-items: center; justify-content: center; background: var(--color-background-secondary);">
       <div class="container">
         <h2>Skills Section</h2>
@@ -78,5 +73,12 @@ const hero = new Hero({
     { label: 'View Projects', path: '#projects', variant: 'primary' },
     { label: 'Contact Me', path: '#contact', variant: 'secondary' }
   ]
+});
+
+// Initialize About Section
+const aboutSection = new AboutSection({});
+// Load about data from JSON
+aboutSection.loadData('/src/data/about.json').catch(error => {
+  console.error('Failed to load about data:', error);
 });
 
