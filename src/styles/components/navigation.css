@@ -24,7 +24,7 @@
 .navigation__container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding-top: var(--space-3);
   padding-bottom: var(--space-3);
 }
