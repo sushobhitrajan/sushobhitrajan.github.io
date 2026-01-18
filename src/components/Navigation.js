@@ -9,7 +9,6 @@ export class Navigation {
     this.links = options.links || [];
     this.activeLink = options.activeLink || null;
     this.profileImage = options.profileImage || null;
-    this.isMobileMenuOpen = false;
     this.scrollThreshold = 50;
 
     this.init();
@@ -38,9 +37,7 @@ export class Navigation {
       <div class="navigation__container container">
         ${this.renderProfile()}
         ${this.renderLinks()}
-        ${this.renderMobileToggle()}
       </div>
-      <div class="navigation__backdrop" data-backdrop></div>
     `;
 
     this.container.innerHTML = html;
@@ -86,25 +83,9 @@ export class Navigation {
     }).join('');
 
     return `
-      <div class="navigation__links" data-mobile-menu>
+      <div class="navigation__links">
         ${linksHtml}
       </div>
-    `;
-  }
-
-  /**
-   * Render mobile menu toggle button
-   */
-  renderMobileToggle() {
-    return `
-      <button
-        class="navigation__toggle"
-        aria-label="Toggle menu"
-        aria-expanded="false"
-        data-mobile-toggle
-      >
-        <span class="navigation__toggle-icon"></span>
-      </button>
     `;
   }
 
@@ -115,29 +96,11 @@ export class Navigation {
     // Scroll event for backdrop blur effect
     window.addEventListener('scroll', this.handleScroll.bind(this), { passive: true });
 
-    // Mobile menu toggle
-    const toggleButton = this.container.querySelector('[data-mobile-toggle]');
-    if (toggleButton) {
-      toggleButton.addEventListener('click', this.handleMobileMenuToggle.bind(this));
-    }
-
     // Link clicks for active state
     const links = this.container.querySelectorAll('.navigation__link');
     links.forEach(link => {
       link.addEventListener('click', this.handleLinkClick.bind(this));
     });
-
-    // Close mobile menu on outside click
-    document.addEventListener('click', this.handleOutsideClick.bind(this));
-
-    // Close mobile menu on escape key
-    document.addEventListener('keydown', this.handleEscapeKey.bind(this));
-
-    // Close mobile menu on backdrop click
-    const backdrop = this.container.querySelector('[data-backdrop]');
-    if (backdrop) {
-      backdrop.addEventListener('click', this.closeMobileMenu.bind(this));
-    }
   }
 
   /**
@@ -154,32 +117,6 @@ export class Navigation {
   }
 
   /**
-   * Handle mobile menu toggle
-   */
-  handleMobileMenuToggle(event) {
-    event.stopPropagation();
-    this.isMobileMenuOpen = !this.isMobileMenuOpen;
-
-    const menu = this.container.querySelector('[data-mobile-menu]');
-    const toggle = this.container.querySelector('[data-mobile-toggle]');
-    const backdrop = this.container.querySelector('[data-backdrop]');
-
-    if (this.isMobileMenuOpen) {
-      menu.classList.add('navigation__links--open');
-      toggle.classList.add('navigation__toggle--active');
-      toggle.setAttribute('aria-expanded', 'true');
-      if (backdrop) backdrop.classList.add('navigation__backdrop--visible');
-      document.body.style.overflow = 'hidden'; // Prevent scroll when menu is open
-    } else {
-      menu.classList.remove('navigation__links--open');
-      toggle.classList.remove('navigation__toggle--active');
-      toggle.setAttribute('aria-expanded', 'false');
-      if (backdrop) backdrop.classList.remove('navigation__backdrop--visible');
-      document.body.style.overflow = '';
-    }
-  }
-
-  /**
    * Handle link click
    */
   handleLinkClick(event) {
@@ -188,56 +125,6 @@ export class Navigation {
 
     // Update active link
     this.setActive(linkId);
-
-    // Close mobile menu if open
-    if (this.isMobileMenuOpen) {
-      // Create a synthetic event to close the menu
-      const syntheticEvent = new Event('click');
-      syntheticEvent.stopPropagation = () => {};
-      this.closeMobileMenu();
-    }
-  }
-
-  /**
-   * Close mobile menu
-   */
-  closeMobileMenu() {
-    if (!this.isMobileMenuOpen) return;
-
-    this.isMobileMenuOpen = false;
-
-    const menu = this.container.querySelector('[data-mobile-menu]');
-    const toggle = this.container.querySelector('[data-mobile-toggle]');
-    const backdrop = this.container.querySelector('[data-backdrop]');
-
-    if (menu && toggle) {
-      menu.classList.remove('navigation__links--open');
-      toggle.classList.remove('navigation__toggle--active');
-      toggle.setAttribute('aria-expanded', 'false');
-      if (backdrop) backdrop.classList.remove('navigation__backdrop--visible');
-      document.body.style.overflow = '';
-    }
-  }
-
-  /**
-   * Handle outside click to close mobile menu
-   */
-  handleOutsideClick(event) {
-    if (!this.isMobileMenuOpen) return;
-
-    const isClickInside = this.container.contains(event.target);
-    if (!isClickInside) {
-      this.closeMobileMenu();
-    }
-  }
-
-  /**
-   * Handle escape key to close mobile menu
-   */
-  handleEscapeKey(event) {
-    if (event.key === 'Escape' && this.isMobileMenuOpen) {
-      this.closeMobileMenu();
-    }
   }
 
   /**
@@ -275,8 +162,6 @@ export class Navigation {
    */
   destroy() {
     window.removeEventListener('scroll', this.handleScroll.bind(this));
-    document.removeEventListener('click', this.handleOutsideClick.bind(this));
-    document.removeEventListener('keydown', this.handleEscapeKey.bind(this));
 
     if (this.container) {
       this.container.remove();
