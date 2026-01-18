@@ -90,7 +90,7 @@
 
 /* Name - Large typography (48-72px) */
 .hero__name {
-  font-size: var(--font-size-h1);
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: var(--font-weight-bold);
   color: var(--color-text);
   line-height: var(--line-height-tight);
@@ -115,7 +115,7 @@
 
 /* Tagline */
 .hero__tagline {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-base);
   font-weight: var(--font-weight-normal);
   color: var(--color-text-secondary);
   line-height: var(--line-height-relaxed);
