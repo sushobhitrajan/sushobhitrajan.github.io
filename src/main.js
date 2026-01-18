@@ -80,3 +80,6 @@ const skillsSection = new SkillsSection({});
 skillsSection.loadData('/src/data/skills.json').catch(error => {
   console.error('Failed to load skills data:', error);
 });
+
+// Show the app once everything is initialized
+document.getElementById('app').classList.add('loaded');

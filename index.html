@@ -16,13 +16,23 @@
 
   <!-- Main CSS -->
   <link rel="stylesheet" href="/src/styles/main.css">
+
+  <style>
+    /* Hide loading content immediately */
+    #app {
+      opacity: 0;
+    }
+
+    /* Show content once JS loads */
+    #app.loaded {
+      opacity: 1;
+      transition: opacity 0.3s ease-in;
+    }
+  </style>
 </head>
 <body>
   <!-- Main application container -->
-  <div id="app">
-    <h1>Portfolio System</h1>
-    <p>Loading...</p>
-  </div>
+  <div id="app"></div>
 
   <!-- Main JavaScript entry point -->
   <script type="module" src="/src/main.js"></script>
