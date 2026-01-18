@@ -52,7 +52,7 @@
 .navigation__links {
   display: flex;
   align-items: center;
-  gap: var(--space-1);
+  gap: 4px;
   justify-content: center;
 }
 
@@ -199,14 +199,14 @@
   }
 
   .navigation__links {
-    gap: var(--space-1);
+    gap: 6px;
   }
 }
 
 /* Desktop */
 @media (min-width: 1024px) {
   .navigation__links {
-    gap: var(--space-2);
+    gap: 8px;
   }
 }
 
