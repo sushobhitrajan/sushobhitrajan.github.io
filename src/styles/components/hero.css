@@ -174,7 +174,7 @@
 /* Responsive Typography - Mobile */
 @media (max-width: 640px) {
   .hero {
-    padding-top: 280px; /* More space for mobile navigation */
+    padding-top: 0; /* No padding needed since nav is relative on mobile */
   }
 
   .hero__container {
@@ -208,7 +208,7 @@
 /* Tablet */
 @media (min-width: 641px) and (max-width: 768px) {
   .hero {
-    padding-top: 120px; /* Adjust for tablet navigation */
+    padding-top: 80px; /* Keep padding for tablet since nav is still fixed */
   }
 
   .hero__content {
