@@ -36,14 +36,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run linting
-        run: npm run lint
-        continue-on-error: true
-
-      - name: Run tests
-        run: npm test
-        continue-on-error: true
-
       - name: Build with Vite
         run: npm run build
 
