@@ -59,7 +59,7 @@
 /* Individual navigation link */
 .navigation__link {
   position: relative;
-  font-size: var(--font-size-base);
+  font-size: 14px;
   font-weight: var(--font-weight-medium);
   color: var(--color-text);
   padding: var(--space-1) var(--space-2);
