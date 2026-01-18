@@ -192,6 +192,8 @@ export class Navigation {
    * Close mobile menu
    */
   closeMobileMenu() {
+    if (!this.isMobileMenuOpen) return;
+
     this.isMobileMenuOpen = false;
 
     const menu = this.container.querySelector('[data-mobile-menu]');
