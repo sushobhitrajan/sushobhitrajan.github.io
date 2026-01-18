@@ -1,0 +1,126 @@
+{
+  "experiences": [
+    {
+      "company": "Amazon Web Services (AWS)",
+      "logo": "/images/companies/aws.png",
+      "website": "https://aws.amazon.com/ebs/",
+      "location": "Seattle, Washington, United States · On-site",
+      "roles": [
+        {
+          "title": "Senior Software Development Engineer",
+          "startDate": "2024-03",
+          "endDate": "present",
+          "description": "AWS EBS - Storage Optimization/Performance/HeatManagement",
+          "achievements": [
+            "Leading storage optimization strategies for AWS EBS",
+            "Implementing performance enhancements for cloud storage systems",
+            "Managing heat management solutions for large-scale distributed storage infrastructure",
+            "Working with block storage and machine learning for optimization"
+          ],
+          "technologies": ["AWS EBS", "Cloud Storage", "Block Storage", "Machine Learning", "Distributed Systems"]
+        }
+      ]
+    },
+    {
+      "company": "Amazon",
+      "logo": "/images/companies/amazon.png",
+      "website": "https://www.amazon.com",
+      "location": "Greater Bengaluru Area",
+      "roles": [
+        {
+          "title": "Lead Senior Software Development Engineer",
+          "startDate": "2022-01",
+          "endDate": "2024-03",
+          "description": "Amazon Payment Products - Co-Branded Credit Card (CBCC), ShopWithPoints, Servicing, Secure Bank Partner Connectivity",
+          "achievements": [
+            "Led technical strategy as Sr. SDE for Amazon's co-branded credit card launch in Europe (UK, DE) and Japan",
+            "Designed and architected the technology ecosystem to simplify Amazon's credit payment experiences for customers",
+            "Established long-term technical roadmaps to accelerate new payment product launches across European and Japanese marketplaces",
+            "Built scalable API-based solutions to securely connect external partners",
+            "Delivered world-class account servicing by creating personalized end-to-end payment experiences, increasing card usage both on and off Amazon",
+            "Got featured in Amazon's internal recognition program"
+          ],
+          "technologies": ["Payment Services", "Distributed Systems", "Scalable Architecture", "API Design", "Security", "Microservices"]
+        }
+      ]
+    },
+    {
+      "company": "Salesforce",
+      "logo": "/images/companies/salesforce.png",
+      "website": "https://www.salesforce.com/sales/enablement/what-is-sales-enablement/",
+      "location": "Greater Bengaluru Area",
+      "roles": [
+        {
+          "title": "Lead Member Of Technical Staff",
+          "startDate": "2021-05",
+          "endDate": "2022-01",
+          "description": "Lead SDE and founding member for Sales Enablement integrated with Einstein AI",
+          "achievements": [
+            "Lead Software Engineer driving innovation in Salesforce's Sales Cloud product suite - the #1 CRM globally",
+            "Designed and architected a Sales Enablement product integrated with Einstein AI to measure conversation quality, effectiveness and talk-to-listen ratios",
+            "Delivered 360-degree visibility into sales interactions, ensuring sales teams achieve success from anywhere",
+            "Built real-time sales coaching features, improving reps' talk-to-listen ratios for multi-million dollar sales deals"
+          ],
+          "technologies": ["Salesforce Sales Cloud", "Einstein AI", "Machine Learning", "Real-time Systems", "CRM"]
+        }
+      ]
+    },
+    {
+      "company": "Flipkart",
+      "logo": "/images/companies/flipkart.png",
+      "website": "https://www.flipkart.com",
+      "location": "Bengaluru, KA, India · On-site",
+      "roles": [
+        {
+          "title": "Senior/Lead Software Development Engineer",
+          "startDate": "2015-07",
+          "endDate": "2021-06",
+          "description": "Personalized Recommendations, Ads & Merchandising Recommendations, Grocery Smart Basket Building, Machine Learning Model Integration to boost Discovery/Sales/Views/GMV, Seller Ranking Service, Ekart (Supply Chain - backend)",
+          "achievements": [
+            "Won M3 Hackathon (Merchandising, Monetization, Marketing) - Open Category among 30+ teams",
+            "Experienced and results-driven professional with proven track record in distributed systems, content discovery, recommendation platforms, supply chain management, and search engine development",
+            "Built personalized recommendation systems and ads platform boosting discovery, sales, views, and GMV",
+            "Developed Grocery Smart Basket Building feature for intelligent shopping",
+            "Integrated machine learning models for optimizing user experiences and solving complex issues at scale",
+            "Created seller ranking service for marketplace optimization",
+            "Worked on Ekart supply chain backend systems",
+            "Leveraged Elasticsearch, Apache Hadoop, Spring Boot, Jenkins, Docker for scalable solutions",
+            "Led development teams and contributed to scalability and success of prominent e-commerce platform"
+          ],
+          "technologies": [
+            "Machine Learning",
+            "Distributed Systems",
+            "Recommender Systems",
+            "Batch Processing",
+            "Elasticsearch",
+            "Apache Hadoop",
+            "Spring Boot",
+            "Docker",
+            "Jenkins",
+            "Microservices"
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Udacity",
+      "logo": "/images/companies/udacity.png",
+      "website": "https://www.udacity.com",
+      "location": "Bengaluru, Karnataka, India",
+      "roles": [
+        {
+          "title": "Graduate - Machine Learning Nanodegree",
+          "startDate": "2019-01",
+          "endDate": "2019-04",
+          "description": "Completed comprehensive Machine Learning program covering supervised and unsupervised learning",
+          "achievements": [
+            "Supervised Learning: Linear Regression, Perceptron, Decision Trees, Naive Bayes, SVM, Ensemble Methods",
+            "Unsupervised Learning: Clustering, Hierarchical & Density based Clustering, Gaussian Mixed Model, PCA, ICA",
+            "Completed hands-on projects applying ML techniques to real-world problems"
+          ],
+          "technologies": ["Python", "Machine Learning", "Scikit-learn", "TensorFlow", "Data Science"]
+        }
+      ]
+    }
+  ]
+}

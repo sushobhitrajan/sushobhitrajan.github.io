@@ -1,23 +1,23 @@
 {
   "name": "Sushobhit Rajan",
-  "tagline": "AI Agent Systems & LLM Engineering",
+  "tagline": "Lead SSE with Applied ML Focus at Amazon",
   "photo": "/images/profile.jpg",
   "bio": [
-    "I'm an AI engineer specializing in Large Language Models, autonomous agents, and the Model Context Protocol (MCP). I build intelligent systems that leverage cutting-edge AI to solve real-world problems.",
-    "My work focuses on creating robust agent architectures, implementing MCP servers for seamless tool integration, and developing LLM-powered applications that push the boundaries of what's possible with AI.",
-    "I'm passionate about the intersection of software engineering and artificial intelligence, constantly exploring new ways to make AI agents more capable, reliable, and accessible."
+    "I'm a software engineer with 10+ years of experience building scalable distributed systems, machine learning platforms, and payment solutions at leading tech companies including AWS, Amazon, Salesforce, and Flipkart.",
+    "Currently at AWS, I lead storage optimization and performance initiatives for AWS EBS. Previously, I architected Amazon's co-branded credit card platform for Europe and Japan, built Einstein AI-powered sales enablement tools at Salesforce, and created personalized recommendation systems at Flipkart.",
+    "I'm passionate about solving complex problems at scale, leveraging machine learning for real-world impact, and building systems that millions of users rely on every day."
   ],
   "highlights": [
-    "Expert in LLM integration and prompt engineering",
-    "Building production-ready AI agent systems",
-    "Model Context Protocol (MCP) implementation",
-    "Open source contributor to AI tooling"
+    "10+ years of software engineering experience",
+    "Led technical strategy for Amazon Payment Products across Europe and Japan",
+    "Built ML-powered recommendation systems serving millions of users",
+    "Specialized in distributed systems, scalable architecture, and machine learning"
   ],
   "resumeLink": "/downloads/resume.pdf",
   "currentFocus": [
-    "Autonomous AI agents",
-    "Model Context Protocol (MCP)",
-    "LLM application architecture",
-    "Agent orchestration systems"
+    "AWS EBS Storage Optimization",
+    "Cloud Storage Performance",
+    "Distributed Systems at Scale",
+    "Applied Machine Learning"
   ]
 }

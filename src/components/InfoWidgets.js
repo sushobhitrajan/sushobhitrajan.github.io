@@ -93,43 +93,43 @@ export class InfoWidgets {
   renderDefaultWidgets() {
     const defaultWidgets = [
       {
-        id: 'llm',
+        id: 'distributed-systems',
         icon: '',
-        title: 'Large Language Models',
-        description: 'Leveraging GPT-4, Claude, and other state-of-the-art LLMs to build intelligent applications with advanced reasoning capabilities.',
+        title: 'Distributed Systems',
+        description: 'Building scalable, fault-tolerant systems that handle millions of requests. Expert in microservices architecture, API design, and cloud-native applications.',
         stats: [
-          { value: '100B+', label: 'Parameters' },
-          { value: '99%', label: 'Accuracy' }
+          { value: '10+ Years', label: 'Experience' },
+          { value: 'Millions', label: 'Users Served' }
         ]
       },
       {
-        id: 'mcp',
+        id: 'machine-learning',
         icon: '',
-        title: 'Model Context Protocol',
-        description: 'Implementing MCP servers and tools to enable seamless integration between AI agents and external systems, APIs, and data sources.',
+        title: 'Machine Learning',
+        description: 'Developing ML-powered recommendation systems, ranking algorithms, and intelligent features that boost discovery, sales, and user engagement at scale.',
         stats: [
-          { value: '50+', label: 'Tools' },
-          { value: 'Real-time', label: 'Integration' }
+          { value: 'Production', label: 'ML Systems' },
+          { value: 'Real-time', label: 'Inference' }
         ]
       },
       {
-        id: 'agents',
+        id: 'payment-systems',
         icon: '',
-        title: 'Autonomous Agents',
-        description: 'Building self-directed AI systems that can plan, execute tasks, and adapt to changing environments using advanced agent architectures.',
+        title: 'Payment Systems',
+        description: 'Architecting secure, scalable payment platforms for global markets. Led Amazon\'s co-branded credit card launch across Europe and Japan with seamless partner integration.',
         stats: [
-          { value: 'Multi-step', label: 'Reasoning' },
-          { value: 'Adaptive', label: 'Learning' }
+          { value: 'Multi-region', label: 'Deployment' },
+          { value: 'Bank-grade', label: 'Security' }
         ]
       },
       {
-        id: 'rag',
+        id: 'cloud-storage',
         icon: '',
-        title: 'RAG Systems',
-        description: 'Designing Retrieval-Augmented Generation pipelines with vector databases to provide AI agents with relevant, up-to-date context.',
+        title: 'Cloud Storage',
+        description: 'Optimizing AWS EBS for performance and efficiency. Working on storage optimization, heat management, and block storage solutions for cloud infrastructure.',
         stats: [
-          { value: 'Vector', label: 'Search' },
-          { value: 'Dynamic', label: 'Context' }
+          { value: 'AWS EBS', label: 'Platform' },
+          { value: 'Petabyte', label: 'Scale' }
         ]
       }
     ];
