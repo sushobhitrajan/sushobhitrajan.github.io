@@ -53,11 +53,11 @@ document.getElementById('app').innerHTML = `
 
 // Initialize Hero
 const hero = new Hero({
-  name: 'Sushobhit Rajan',
-  tagline: 'Software Engineering & Machine Learning',
+  name: 'Building the Future with AI Agents',
+  tagline: 'Exploring Large Language Models, Model Context Protocol (MCP), and Autonomous Agent Systems',
   ctaButtons: [
-    { label: 'View Projects', path: '#projects', variant: 'primary' },
-    { label: 'Contact Me', path: '#contact', variant: 'secondary' }
+    { label: 'Explore Projects', path: '#projects', variant: 'primary' },
+    { label: 'Learn More', path: '#about', variant: 'secondary' }
   ]
 });
 

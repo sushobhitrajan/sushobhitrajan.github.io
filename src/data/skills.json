@@ -1,138 +1,131 @@
 {
   "categories": [
     {
-      "name": "Languages",
-      "icon": "💻",
+      "name": "LLM & AI Agents",
+      "icon": "🤖",
       "skills": [
         {
-          "name": "JavaScript",
-          "icon": "🟨",
+          "name": "OpenAI GPT-4",
+          "icon": "🧠",
           "proficiency": "expert",
-          "yearsOfExperience": 5,
-          "description": "Full-stack development with modern ES6+"
+          "yearsOfExperience": 2,
+          "description": "Advanced prompt engineering and API integration"
         },
+        {
+          "name": "Anthropic Claude",
+          "icon": "🎯",
+          "proficiency": "expert",
+          "yearsOfExperience": 2,
+          "description": "Building with Claude API and prompt optimization"
+        },
+        {
+          "name": "LangChain",
+          "icon": "⛓️",
+          "proficiency": "advanced",
+          "yearsOfExperience": 2,
+          "description": "Agent orchestration and chain composition"
+        },
+        {
+          "name": "Agent Frameworks",
+          "icon": "🔧",
+          "proficiency": "advanced",
+          "yearsOfExperience": 2,
+          "description": "AutoGPT, BabyAGI, and custom agent architectures"
+        }
+      ]
+    },
+    {
+      "name": "Model Context Protocol",
+      "icon": "🔌",
+      "skills": [
+        {
+          "name": "MCP Servers",
+          "icon": "🖥️",
+          "proficiency": "expert",
+          "yearsOfExperience": 1,
+          "description": "Building and deploying MCP server implementations"
+        },
+        {
+          "name": "Tool Integration",
+          "icon": "🛠️",
+          "proficiency": "expert",
+          "yearsOfExperience": 1,
+          "description": "Creating custom tools and resources for AI agents"
+        },
+        {
+          "name": "Protocol Design",
+          "icon": "📐",
+          "proficiency": "advanced",
+          "yearsOfExperience": 1,
+          "description": "Designing efficient agent-tool communication patterns"
+        }
+      ]
+    },
+    {
+      "name": "AI Engineering",
+      "icon": "⚙️",
+      "skills": [
         {
           "name": "Python",
           "icon": "🐍",
           "proficiency": "expert",
           "yearsOfExperience": 6,
-          "description": "Machine learning and data processing"
+          "description": "Primary language for AI/ML development"
         },
         {
           "name": "TypeScript",
           "icon": "🔷",
           "proficiency": "advanced",
           "yearsOfExperience": 4,
-          "description": "Type-safe application development"
+          "description": "Building type-safe AI applications"
         },
         {
-          "name": "Java",
-          "icon": "☕",
+          "name": "Vector Databases",
+          "icon": "🗄️",
           "proficiency": "advanced",
-          "yearsOfExperience": 3,
-          "description": "Enterprise application development"
+          "yearsOfExperience": 2,
+          "description": "Pinecone, Weaviate, ChromaDB for RAG systems"
+        },
+        {
+          "name": "Prompt Engineering",
+          "icon": "✍️",
+          "proficiency": "expert",
+          "yearsOfExperience": 2,
+          "description": "Optimizing prompts for reliability and performance"
         }
       ]
     },
     {
-      "name": "Frameworks",
-      "icon": "⚛️",
+      "name": "Infrastructure",
+      "icon": "☁️",
       "skills": [
         {
-          "name": "React",
-          "icon": "⚛️",
-          "proficiency": "expert",
-          "yearsOfExperience": 5,
-          "description": "Modern UI development"
-        },
-        {
-          "name": "Node.js",
-          "icon": "🟢",
-          "proficiency": "expert",
-          "yearsOfExperience": 5,
-          "description": "Backend API development"
-        },
-        {
-          "name": "TensorFlow",
-          "icon": "🧠",
+          "name": "Docker",
+          "icon": "🐳",
           "proficiency": "advanced",
-          "yearsOfExperience": 3,
-          "description": "Machine learning models"
-        },
-        {
-          "name": "Express",
-          "icon": "🚂",
-          "proficiency": "expert",
           "yearsOfExperience": 4,
-          "description": "RESTful API development"
-        }
-      ]
-    },
-    {
-      "name": "Tools",
-      "icon": "🛠️",
-      "skills": [
+          "description": "Containerizing AI applications"
+        },
+        {
+          "name": "AWS",
+          "icon": "☁️",
+          "proficiency": "advanced",
+          "yearsOfExperience": 4,
+          "description": "Deploying scalable AI services"
+        },
+        {
+          "name": "API Design",
+          "icon": "🔗",
+          "proficiency": "expert",
+          "yearsOfExperience": 5,
+          "description": "Building robust APIs for AI systems"
+        },
         {
           "name": "Git",
           "icon": "📦",
           "proficiency": "expert",
           "yearsOfExperience": 6,
           "description": "Version control and collaboration"
-        },
-        {
-          "name": "Docker",
-          "icon": "🐳",
-          "proficiency": "advanced",
-          "yearsOfExperience": 4,
-          "description": "Containerization and deployment"
-        },
-        {
-          "name": "VS Code",
-          "icon": "💙",
-          "proficiency": "expert",
-          "yearsOfExperience": 5,
-          "description": "Primary development environment"
-        },
-        {
-          "name": "Webpack",
-          "icon": "📦",
-          "proficiency": "advanced",
-          "yearsOfExperience": 4,
-          "description": "Module bundling and optimization"
-        }
-      ]
-    },
-    {
-      "name": "Platforms",
-      "icon": "☁️",
-      "skills": [
-        {
-          "name": "AWS",
-          "icon": "☁️",
-          "proficiency": "advanced",
-          "yearsOfExperience": 4,
-          "description": "Cloud infrastructure and services"
-        },
-        {
-          "name": "GitHub",
-          "icon": "🐙",
-          "proficiency": "expert",
-          "yearsOfExperience": 6,
-          "description": "Code hosting and CI/CD"
-        },
-        {
-          "name": "Linux",
-          "icon": "🐧",
-          "proficiency": "advanced",
-          "yearsOfExperience": 5,
-          "description": "Server administration"
-        },
-        {
-          "name": "Firebase",
-          "icon": "🔥",
-          "proficiency": "advanced",
-          "yearsOfExperience": 3,
-          "description": "Backend as a service"
         }
       ]
     }
