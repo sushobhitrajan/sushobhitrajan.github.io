@@ -12,6 +12,7 @@
   justify-content: center;
   overflow: hidden;
   background: var(--color-background);
+  padding-top: 80px; /* Account for fixed navigation */
 }
 
 /* Animated gradient background */
@@ -172,6 +173,10 @@
 
 /* Responsive Typography - Mobile */
 @media (max-width: 640px) {
+  .hero {
+    padding-top: 280px; /* More space for mobile navigation */
+  }
+
   .hero__container {
     padding: var(--space-4) var(--space-3);
   }
@@ -202,6 +207,10 @@
 
 /* Tablet */
 @media (min-width: 641px) and (max-width: 768px) {
+  .hero {
+    padding-top: 120px; /* Adjust for tablet navigation */
+  }
+
   .hero__content {
     gap: var(--space-5);
   }
