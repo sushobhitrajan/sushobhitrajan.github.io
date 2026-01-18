@@ -53,11 +53,11 @@ document.getElementById('app').innerHTML = `
 
 // Initialize Hero
 const hero = new Hero({
-  name: 'Building the Future with AI Agents',
-  tagline: 'Exploring Large Language Models, Model Context Protocol (MCP), and Autonomous Agent Systems',
+  name: 'AI Agents & LLM Engineering',
+  tagline: 'Exploring the intersection of Large Language Models, Model Context Protocol, and Autonomous Agent Systems to build intelligent, context-aware applications',
   ctaButtons: [
-    { label: 'Explore Projects', path: '#projects', variant: 'primary' },
-    { label: 'Learn More', path: '#about', variant: 'secondary' }
+    { label: 'View Projects', path: '#projects', variant: 'primary' },
+    { label: 'Explore Skills', path: '#skills', variant: 'secondary' }
   ]
 });
 
