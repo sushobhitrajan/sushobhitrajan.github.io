@@ -40,6 +40,7 @@ export class Navigation {
         ${this.renderLinks()}
         ${this.renderMobileToggle()}
       </div>
+      <div class="navigation__backdrop" data-backdrop></div>
     `;
 
     this.container.innerHTML = html;
@@ -131,6 +132,12 @@ export class Navigation {
 
     // Close mobile menu on escape key
     document.addEventListener('keydown', this.handleEscapeKey.bind(this));
+
+    // Close mobile menu on backdrop click
+    const backdrop = this.container.querySelector('[data-backdrop]');
+    if (backdrop) {
+      backdrop.addEventListener('click', this.closeMobileMenu.bind(this));
+    }
   }
 
   /**
@@ -155,16 +162,19 @@ export class Navigation {
 
     const menu = this.container.querySelector('[data-mobile-menu]');
     const toggle = this.container.querySelector('[data-mobile-toggle]');
+    const backdrop = this.container.querySelector('[data-backdrop]');
 
     if (this.isMobileMenuOpen) {
       menu.classList.add('navigation__links--open');
       toggle.classList.add('navigation__toggle--active');
       toggle.setAttribute('aria-expanded', 'true');
+      if (backdrop) backdrop.classList.add('navigation__backdrop--visible');
       document.body.style.overflow = 'hidden'; // Prevent scroll when menu is open
     } else {
       menu.classList.remove('navigation__links--open');
       toggle.classList.remove('navigation__toggle--active');
       toggle.setAttribute('aria-expanded', 'false');
+      if (backdrop) backdrop.classList.remove('navigation__backdrop--visible');
       document.body.style.overflow = '';
     }
   }
@@ -198,11 +208,13 @@ export class Navigation {
 
     const menu = this.container.querySelector('[data-mobile-menu]');
     const toggle = this.container.querySelector('[data-mobile-toggle]');
+    const backdrop = this.container.querySelector('[data-backdrop]');
 
     if (menu && toggle) {
       menu.classList.remove('navigation__links--open');
       toggle.classList.remove('navigation__toggle--active');
       toggle.setAttribute('aria-expanded', 'false');
+      if (backdrop) backdrop.classList.remove('navigation__backdrop--visible');
       document.body.style.overflow = '';
     }
   }
