@@ -16,6 +16,7 @@
 /* Component styles */
 @import './components/navigation.css';
 @import './components/hero.css';
+@import './components/info-widgets.css';
 @import './components/about.css';
 @import './components/skills.css';
 @import './components/contact.css';

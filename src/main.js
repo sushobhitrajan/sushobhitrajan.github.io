@@ -6,6 +6,7 @@
 // Import components
 import { Navigation } from './components/Navigation.js';
 import { Hero } from './components/Hero.js';
+import { InfoWidgets } from './components/InfoWidgets.js';
 import { AboutSection } from './components/AboutSection.js';
 import { SkillsSection } from './components/SkillsSection.js';
 import { ContactSection } from './components/ContactSection.js';
@@ -60,6 +61,9 @@ const hero = new Hero({
     { label: 'Explore Expertise', path: '#skills', variant: 'secondary' }
   ]
 });
+
+// Initialize Info Widgets
+const infoWidgets = new InfoWidgets({});
 
 // Initialize About Section
 const aboutSection = new AboutSection({});
