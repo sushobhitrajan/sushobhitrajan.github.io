@@ -174,7 +174,7 @@
 /* Responsive Typography - Mobile */
 @media (max-width: 640px) {
   .hero {
-    padding-top: 0; /* No padding needed since nav is relative on mobile */
+    padding-top: 60px; /* Small padding for compact nav */
   }
 
   .hero__container {

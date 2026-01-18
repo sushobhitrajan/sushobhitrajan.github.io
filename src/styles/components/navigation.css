@@ -169,13 +169,14 @@
 /* Mobile styles */
 @media (max-width: 767px) {
   .navigation {
-    position: relative; /* Change to relative on mobile to avoid overlap */
+    position: fixed; /* Keep it fixed */
   }
 
   .navigation__container {
-    flex-direction: column;
-    gap: var(--space-2);
-    padding: var(--space-4);
+    flex-direction: row; /* Keep horizontal */
+    gap: 0;
+    padding: var(--space-2) var(--space-2);
+    background-color: var(--color-background);
   }
 
   .navigation__toggle {
@@ -183,17 +184,18 @@
   }
 
   .navigation__links {
-    flex-direction: column;
-    gap: var(--space-1);
+    flex-direction: row; /* Horizontal layout */
+    flex-wrap: wrap; /* Allow wrapping if needed */
+    gap: 2px;
     width: 100%;
+    justify-content: center;
   }
 
   .navigation__link {
-    width: 100%;
-    padding: var(--space-2) var(--space-3);
-    border-radius: var(--radius-md);
-    justify-content: center;
-    text-align: center;
+    font-size: 11px; /* Smaller text */
+    padding: var(--space-1) var(--space-1);
+    border-radius: var(--radius-sm);
+    white-space: nowrap;
   }
 
   .navigation__link:hover {
