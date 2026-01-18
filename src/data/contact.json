@@ -1,0 +1,22 @@
+{
+  "name": "Sushobhit Rajan",
+  "email": "sushobhit.rajan@example.com",
+  "callToAction": "Let's build something amazing together! Feel free to reach out.",
+  "socialLinks": [
+    {
+      "platform": "LinkedIn",
+      "url": "https://www.linkedin.com/in/susrajan/",
+      "icon": "💼"
+    },
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/sushobhitrajan",
+      "icon": "💻"
+    },
+    {
+      "platform": "Twitter",
+      "url": "https://twitter.com/yourusername",
+      "icon": "🐦"
+    }
+  ]
+}
