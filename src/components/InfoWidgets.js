@@ -96,41 +96,25 @@ export class InfoWidgets {
         id: 'distributed-systems',
         icon: '',
         title: 'Distributed Systems',
-        description: 'Building scalable, fault-tolerant systems that handle millions of requests. Expert in microservices architecture, API design, and cloud-native applications.',
-        stats: [
-          { value: '10+ Years', label: 'Experience' },
-          { value: 'Millions', label: 'Users Served' }
-        ]
+        description: 'Building scalable systems that handle millions of requests with microservices and cloud-native architecture.'
       },
       {
         id: 'machine-learning',
         icon: '',
         title: 'Machine Learning',
-        description: 'Developing ML-powered recommendation systems, ranking algorithms, and intelligent features that boost discovery, sales, and user engagement at scale.',
-        stats: [
-          { value: 'Production', label: 'ML Systems' },
-          { value: 'Real-time', label: 'Inference' }
-        ]
+        description: 'Developing ML-powered recommendation systems and ranking algorithms that boost engagement at scale.'
       },
       {
         id: 'payment-systems',
         icon: '',
         title: 'Payment Systems',
-        description: 'Architecting secure, scalable payment platforms for global markets. Led Amazon\'s co-branded credit card launch across Europe and Japan with seamless partner integration.',
-        stats: [
-          { value: 'Multi-region', label: 'Deployment' },
-          { value: 'Bank-grade', label: 'Security' }
-        ]
+        description: 'Architecting secure payment platforms for global markets with seamless partner integration.'
       },
       {
         id: 'cloud-storage',
         icon: '',
         title: 'Cloud Storage',
-        description: 'Optimizing AWS EBS for performance and efficiency. Working on storage optimization, heat management, and block storage solutions for cloud infrastructure.',
-        stats: [
-          { value: 'AWS EBS', label: 'Platform' },
-          { value: 'Petabyte', label: 'Scale' }
-        ]
+        description: 'Optimizing AWS EBS for performance and efficiency at petabyte scale with intelligent heat management.'
       }
     ];
 
