@@ -78,7 +78,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-6);
+  gap: var(--space-4);
   padding: var(--space-4);
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
@@ -90,7 +90,7 @@
 
 /* Name - Large typography (48-72px) */
 .hero__name {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: var(--font-weight-bold);
   color: var(--color-text);
   line-height: var(--line-height-tight);
@@ -115,7 +115,7 @@
 
 /* Tagline */
 .hero__tagline {
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-sm);
   font-weight: var(--font-weight-normal);
   color: var(--color-text-secondary);
   line-height: var(--line-height-relaxed);
