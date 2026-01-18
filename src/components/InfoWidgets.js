@@ -63,7 +63,7 @@ export class InfoWidgets {
   renderWidget(widget) {
     return `
       <div class="info-widget" data-widget-id="${widget.id}">
-        <div class="info-widget__icon">${widget.icon}</div>
+        ${widget.icon ? `<div class="info-widget__icon">${widget.icon}</div>` : ''}
         <h3 class="info-widget__title">${widget.title}</h3>
         <p class="info-widget__description">${widget.description}</p>
         ${widget.stats ? this.renderStats(widget.stats) : ''}
@@ -94,7 +94,7 @@ export class InfoWidgets {
     const defaultWidgets = [
       {
         id: 'llm',
-        icon: '🧠',
+        icon: '',
         title: 'Large Language Models',
         description: 'Leveraging GPT-4, Claude, and other state-of-the-art LLMs to build intelligent applications with advanced reasoning capabilities.',
         stats: [
@@ -104,7 +104,7 @@ export class InfoWidgets {
       },
       {
         id: 'mcp',
-        icon: '🔌',
+        icon: '',
         title: 'Model Context Protocol',
         description: 'Implementing MCP servers and tools to enable seamless integration between AI agents and external systems, APIs, and data sources.',
         stats: [
@@ -114,7 +114,7 @@ export class InfoWidgets {
       },
       {
         id: 'agents',
-        icon: '🤖',
+        icon: '',
         title: 'Autonomous Agents',
         description: 'Building self-directed AI systems that can plan, execute tasks, and adapt to changing environments using advanced agent architectures.',
         stats: [
@@ -124,7 +124,7 @@ export class InfoWidgets {
       },
       {
         id: 'rag',
-        icon: '📚',
+        icon: '',
         title: 'RAG Systems',
         description: 'Designing Retrieval-Augmented Generation pipelines with vector databases to provide AI agents with relevant, up-to-date context.',
         stats: [

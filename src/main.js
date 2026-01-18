@@ -54,7 +54,7 @@ document.getElementById('app').innerHTML = `
 
 // Initialize Hero
 const hero = new Hero({
-  name: '🤖 AI Agents & LLM Engineering',
+  name: 'AI Agents & LLM Engineering',
   tagline: 'Building the next generation of intelligent systems through Large Language Models, Model Context Protocol, and autonomous agent architectures. Transforming how AI interacts with tools, data, and users.',
   ctaButtons: [
     { label: '→ View Projects', path: '#projects', variant: 'primary' },
