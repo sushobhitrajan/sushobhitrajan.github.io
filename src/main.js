@@ -9,6 +9,7 @@ import { Hero } from './components/Hero.js';
 import { InfoWidgets } from './components/InfoWidgets.js';
 import { AboutSection } from './components/AboutSection.js';
 import { SkillsSection } from './components/SkillsSection.js';
+import { ExperienceSection } from './components/ExperienceSection.js';
 import { ContactSection } from './components/ContactSection.js';
 
 // Application initialization
@@ -34,15 +35,9 @@ document.getElementById('app').innerHTML = `
     <!-- Hero section will be inserted here by the Hero component -->
     <!-- About section will be inserted here by the AboutSection component -->
     <!-- Skills section will be inserted here by the SkillsSection component -->
+    <!-- Experience section will be inserted here by the ExperienceSection component -->
 
     <!-- Placeholder sections for testing scroll -->
-    <section id="experience" style="min-height: 100vh; padding: var(--space-8) var(--space-4); display: flex; align-items: center; justify-content: center;">
-      <div class="container">
-        <h2>Experience Section</h2>
-        <p>This is a placeholder for the Experience section.</p>
-      </div>
-    </section>
-
     <section id="projects" style="min-height: 100vh; padding: var(--space-8) var(--space-4); display: flex; align-items: center; justify-content: center; background: var(--color-background-secondary);">
       <div class="container">
         <h2>Projects Section</h2>
@@ -77,6 +72,13 @@ const skillsSection = new SkillsSection({});
 // Load skills data from JSON
 skillsSection.loadData('/src/data/skills.json').catch(error => {
   console.error('Failed to load skills data:', error);
+});
+
+// Initialize Experience Section
+const experienceSection = new ExperienceSection({});
+// Load experience data from JSON
+experienceSection.loadData('/src/data/experience.json').catch(error => {
+  console.error('Failed to load experience data:', error);
 });
 
 // Initialize Contact Section
