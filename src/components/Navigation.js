@@ -181,7 +181,27 @@ export class Navigation {
 
     // Close mobile menu if open
     if (this.isMobileMenuOpen) {
-      this.handleMobileMenuToggle(event);
+      // Create a synthetic event to close the menu
+      const syntheticEvent = new Event('click');
+      syntheticEvent.stopPropagation = () => {};
+      this.closeMobileMenu();
+    }
+  }
+
+  /**
+   * Close mobile menu
+   */
+  closeMobileMenu() {
+    this.isMobileMenuOpen = false;
+
+    const menu = this.container.querySelector('[data-mobile-menu]');
+    const toggle = this.container.querySelector('[data-mobile-toggle]');
+
+    if (menu && toggle) {
+      menu.classList.remove('navigation__links--open');
+      toggle.classList.remove('navigation__toggle--active');
+      toggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
     }
   }
 
@@ -193,7 +213,7 @@ export class Navigation {
 
     const isClickInside = this.container.contains(event.target);
     if (!isClickInside) {
-      this.handleMobileMenuToggle(event);
+      this.closeMobileMenu();
     }
   }
 
@@ -202,7 +222,7 @@ export class Navigation {
    */
   handleEscapeKey(event) {
     if (event.key === 'Escape' && this.isMobileMenuOpen) {
-      this.handleMobileMenuToggle(event);
+      this.closeMobileMenu();
     }
   }
 
