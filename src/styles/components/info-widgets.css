@@ -1,15 +1,16 @@
 /**
  * Info Widgets Component Styles
- * Minimal, Apple-inspired design with 2-column layout
+ * Cards displaying key information about technologies
  */
 
 .info-widgets {
-  padding: var(--space-6) 0;
+  padding: var(--space-8) 0;
   background: var(--color-background);
+  position: relative;
 }
 
 .info-widgets__container {
-  max-width: 800px;
+  max-width: var(--container-max-width);
   margin: 0 auto;
   padding: 0 var(--space-4);
 }
@@ -17,71 +18,136 @@
 .info-widgets__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-3);
+  gap: var(--space-4);
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-/* Individual Widget Card - Apple-inspired minimal design */
+/* Individual Widget Card */
 .info-widget {
-  background: var(--color-background-secondary, #F8FAFC);
-  border-radius: 16px;
-  padding: var(--space-4);
-  border: 1px solid var(--color-border, #E2E8F0);
-  transition: all 0.2s ease;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  border: 1px solid rgba(59, 130, 246, 0.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.info-widget::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3B82F6, #8B5CF6, #EC4899);
+  opacity: 0;
+  transition: opacity var(--transition-base);
 }
 
 .info-widget:hover {
-  background: #FFFFFF;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.15);
+  border-color: rgba(59, 130, 246, 0.3);
 }
 
-/* Widget Icon - Hidden for minimal design */
+.info-widget:hover::before {
+  opacity: 1;
+}
+
+/* Widget Icon */
 .info-widget__icon {
-  display: none;
+  font-size: 3rem;
+  margin-bottom: var(--space-3);
+  display: none; /* Hide icons */
+  animation: float 3s ease-in-out infinite;
 }
 
-/* Widget Title - Smaller, cleaner */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Widget Title */
 .info-widget__title {
-  font-size: 1.125rem;
-  font-weight: 600;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
   color: var(--color-text);
-  margin: 0 0 var(--space-1) 0;
-  line-height: 1.3;
+  margin: 0 0 var(--space-2) 0;
+  line-height: var(--line-height-tight);
 }
 
-/* Widget Description - Concise */
+/* Widget Description */
 .info-widget__description {
-  font-size: 0.875rem;
+  font-size: var(--font-size-base);
   color: var(--color-text-secondary);
-  line-height: 1.5;
-  margin: 0;
+  line-height: var(--line-height-relaxed);
+  margin: 0 0 var(--space-4) 0;
 }
 
-/* Widget Stats - Removed for simplicity */
+/* Widget Stats */
 .info-widget__stats {
-  display: none;
+  display: flex;
+  gap: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-border);
+}
+
+.info-widget__stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.info-widget__stat-value {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent);
+  line-height: 1;
+}
+
+.info-widget__stat-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 /* Responsive Design */
 @media (max-width: 640px) {
   .info-widgets {
-    padding: var(--space-4) 0;
+    padding: var(--space-6) 0;
   }
 
   .info-widgets__grid {
     grid-template-columns: 1fr;
-    gap: var(--space-2);
+    gap: var(--space-3);
   }
 
   .info-widget {
-    padding: var(--space-3);
+    padding: var(--space-4);
   }
 
   .info-widget__title {
-    font-size: 1rem;
+    font-size: var(--font-size-lg);
   }
 
-  .info-widget__description {
-    font-size: 0.8125rem;
+  .info-widget__stats {
+    gap: var(--space-3);
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .info-widgets__grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -93,5 +159,9 @@
 
   .info-widget:hover {
     transform: none;
+  }
+
+  .info-widget__icon {
+    animation: none;
   }
 }
