@@ -3,9 +3,6 @@
  * Initializes all components and sets up the portfolio system
  */
 
-// Import styles
-import './styles/main.css';
-
 // Import components
 import { Navigation } from './components/Navigation.js';
 import { Hero } from './components/Hero.js';
@@ -83,4 +80,3 @@ const skillsSection = new SkillsSection({});
 skillsSection.loadData('/src/data/skills.json').catch(error => {
   console.error('Failed to load skills data:', error);
 });
-
