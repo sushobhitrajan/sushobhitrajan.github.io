@@ -1,22 +1,32 @@
 {
   "name": "Sushobhit Rajan",
-  "email": "sushobhit.rajan@example.com",
-  "callToAction": "Let's build something amazing together! Feel free to reach out.",
+  "email": "sushobhit.rajan@gmail.com",
+  "callToAction": "Let's connect and build something amazing together! Whether you're looking for technical mentorship, collaboration opportunities, or just want to chat about distributed systems and ML.",
   "socialLinks": [
     {
       "platform": "LinkedIn",
       "url": "https://www.linkedin.com/in/susrajan/",
-      "icon": "💼"
+      "icon": "linkedin"
+    },
+    {
+      "platform": "X (Twitter)",
+      "url": "https://x.com/SushobhitRajan",
+      "icon": "x"
     },
     {
       "platform": "GitHub",
       "url": "https://github.com/sushobhitrajan",
-      "icon": "💻"
+      "icon": "github"
     },
     {
-      "platform": "Twitter",
-      "url": "https://twitter.com/yourusername",
-      "icon": "🐦"
+      "platform": "LeetCode",
+      "url": "https://leetcode.com/u/sushobhitr/",
+      "icon": "leetcode"
+    },
+    {
+      "platform": "Topmate",
+      "url": "https://topmate.io/sushobhit_rajan",
+      "icon": "topmate"
     }
   ]
 }

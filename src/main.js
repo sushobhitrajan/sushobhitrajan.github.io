@@ -10,6 +10,7 @@ import { InfoWidgets } from './components/InfoWidgets.js';
 import { AboutSection } from './components/AboutSection.js';
 import { SkillsSection } from './components/SkillsSection.js';
 import { ExperienceSection } from './components/ExperienceSection.js';
+import { ConnectSection } from './components/ConnectSection.js';
 import { ContactSection } from './components/ContactSection.js';
 
 // Application initialization
@@ -19,10 +20,9 @@ console.log('Portfolio System Initialized');
 const navigation = new Navigation({
   links: [
     { id: 'home', label: 'Home', path: '/' },
-    { id: 'about', label: 'About', path: '#about' },
     { id: 'skills', label: 'Skills', path: '#skills' },
-    { id: 'experience', label: 'Experience', path: '#experience' },
-    { id: 'projects', label: 'Projects', path: '#projects' },
+    { id: 'about', label: 'About', path: '#about' },
+    { id: 'connect', label: 'Mentorship', path: '#connect' },
     { id: 'contact', label: 'Contact', path: '#contact' }
   ],
   activeLink: 'home',
@@ -36,14 +36,8 @@ document.getElementById('app').innerHTML = `
     <!-- About section will be inserted here by the AboutSection component -->
     <!-- Skills section will be inserted here by the SkillsSection component -->
     <!-- Experience section will be inserted here by the ExperienceSection component -->
-
-    <!-- Placeholder sections for testing scroll -->
-    <section id="projects" style="min-height: 100vh; padding: var(--space-8) var(--space-4); display: flex; align-items: center; justify-content: center; background: var(--color-background-secondary);">
-      <div class="container">
-        <h2>Projects Section</h2>
-        <p>This is a placeholder for the Projects section.</p>
-      </div>
-    </section>
+    <!-- Connect section will be inserted here by the ConnectSection component -->
+    <div id="connect-section-container"></div>
   </main>
 `;
 
@@ -60,13 +54,6 @@ const hero = new Hero({
 // Initialize Info Widgets
 const infoWidgets = new InfoWidgets({});
 
-// Initialize About Section
-const aboutSection = new AboutSection({});
-// Load about data from JSON
-aboutSection.loadData('/src/data/about.json').catch(error => {
-  console.error('Failed to load about data:', error);
-});
-
 // Initialize Skills Section
 const skillsSection = new SkillsSection({});
 // Load skills data from JSON
@@ -74,11 +61,19 @@ skillsSection.loadData('/src/data/skills.json').catch(error => {
   console.error('Failed to load skills data:', error);
 });
 
-// Initialize Experience Section
-const experienceSection = new ExperienceSection({});
-// Load experience data from JSON
-experienceSection.loadData('/src/data/experience.json').catch(error => {
-  console.error('Failed to load experience data:', error);
+// Initialize About Section
+const aboutSection = new AboutSection({});
+// Append to main
+document.querySelector('main').appendChild(aboutSection.container);
+// Load about data from JSON
+aboutSection.loadData('/src/data/about.json').catch(error => {
+  console.error('Failed to load about data:', error);
+});
+
+// Initialize Connect Section
+const connectSection = new ConnectSection();
+connectSection.init().catch(error => {
+  console.error('Failed to initialize connect section:', error);
 });
 
 // Initialize Contact Section

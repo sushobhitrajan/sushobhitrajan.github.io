@@ -61,8 +61,12 @@ export class InfoWidgets {
    * Render a single widget
    */
   renderWidget(widget) {
+    const isClickable = widget.id === 'about-me';
+    const widgetClass = isClickable ? 'info-widget info-widget--clickable' : 'info-widget';
+    const widgetAttrs = isClickable ? 'role="button" tabindex="0"' : '';
+
     return `
-      <div class="info-widget" data-widget-id="${widget.id}">
+      <div class="${widgetClass}" data-widget-id="${widget.id}" ${widgetAttrs}>
         ${widget.icon ? `<div class="info-widget__icon">${widget.icon}</div>` : ''}
         <h3 class="info-widget__title">${widget.title}</h3>
         <p class="info-widget__description">${widget.description}</p>
@@ -98,8 +102,8 @@ export class InfoWidgets {
         title: 'Distributed Systems',
         description: 'Building scalable, fault-tolerant systems that handle millions of requests. Expert in microservices architecture, API design, and cloud-native applications.',
         stats: [
-          { value: '10+ Years', label: 'Experience' },
-          { value: 'Millions', label: 'Users Served' }
+          { value: 'Multi-region', label: 'Deployment' },
+          { value: 'High Scale', label: 'Architecture' }
         ]
       },
       {

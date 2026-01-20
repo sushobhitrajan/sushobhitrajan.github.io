@@ -147,6 +147,44 @@
   border: 1px solid var(--color-border);
 }
 
+/* Companies Section */
+.about-section__companies {
+  margin-top: var(--space-2);
+}
+
+.about-section__company-list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: var(--space-6);
+  align-items: center;
+  justify-content: flex-start;
+  overflow-x: auto;
+  padding: var(--space-4) 0;
+}
+
+.about-section__company {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.about-section__company-logo {
+  height: 40px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: all var(--transition-base);
+}
+
+.about-section__company-logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
 /* Resume Link */
 .about-section__resume {
   margin-top: var(--space-4);

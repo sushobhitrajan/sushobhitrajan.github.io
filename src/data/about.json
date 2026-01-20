@@ -1,11 +1,37 @@
 {
   "name": "Sushobhit Rajan",
   "tagline": "Lead SSE with Applied ML Focus at Amazon",
-  "photo": "/images/profile.jpg",
+  "photo": "/public/images/profile.jpg",
   "bio": [
     "I'm a software engineer with 10+ years of experience building scalable distributed systems, machine learning platforms, and payment solutions at leading tech companies including AWS, Amazon, Salesforce, and Flipkart.",
-    "Currently at AWS, I lead storage optimization and performance initiatives for AWS EBS. Previously, I architected Amazon's co-branded credit card platform for Europe and Japan, built Einstein AI-powered sales enablement tools at Salesforce, and created personalized recommendation systems at Flipkart.",
+    "Currently at AWS, I lead storage optimization and performance initiatives for AWS EBS. Previously, I worked on Amazon's co-branded credit card platform for Europe and Japan, was a core engineer designing the technical foundation for Einstein AI-powered sales enablement tools at Salesforce, and created personalized recommendation systems at Flipkart.",
     "I'm passionate about solving complex problems at scale, leveraging machine learning for real-world impact, and building systems that millions of users rely on every day."
+  ],
+  "companies": [
+    {
+      "name": "AWS",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
+    },
+    {
+      "name": "Amazon",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"
+    },
+    {
+      "name": "Salesforce",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg"
+    },
+    {
+      "name": "Flipkart",
+      "logo": "https://upload.wikimedia.org/wikipedia/en/2/2f/Flipkart_logo.svg"
+    },
+    {
+      "name": "IBM",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg"
+    },
+    {
+      "name": "Accenture",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Accenture.svg"
+    }
   ],
   "highlights": [
     "10+ years of software engineering experience",
@@ -13,7 +39,7 @@
     "Built ML-powered recommendation systems serving millions of users",
     "Specialized in distributed systems, scalable architecture, and machine learning"
   ],
-  "resumeLink": "/downloads/resume.pdf",
+  "resumeLink": null,
   "currentFocus": [
     "AWS EBS Storage Optimization",
     "Cloud Storage Performance",

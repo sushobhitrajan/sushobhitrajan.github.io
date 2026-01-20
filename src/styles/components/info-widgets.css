@@ -23,6 +23,31 @@
   margin: 0 auto;
 }
 
+/* Make the last widget (About Me) span full width */
+.info-widget[data-widget-id="about-me"] {
+  grid-column: 1 / -1;
+}
+
+/* Clickable widget styles */
+.info-widget--clickable {
+  cursor: pointer;
+}
+
+.info-widget--clickable:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.5);
+}
+
+.info-widget--clickable:active {
+  transform: translateY(-2px);
+}
+
+.info-widget--clickable:focus {
+  outline: 2px solid #3B82F6;
+  outline-offset: 2px;
+}
+
 /* Individual Widget Card */
 .info-widget {
   background: rgba(255, 255, 255, 0.8);
@@ -78,7 +103,7 @@
 
 /* Widget Title */
 .info-widget__title {
-  font-size: var(--font-size-xl);
+  font-size: 1rem !important;
   font-weight: var(--font-weight-bold);
   color: var(--color-text);
   margin: 0 0 var(--space-2) 0;
@@ -87,7 +112,7 @@
 
 /* Widget Description */
 .info-widget__description {
-  font-size: var(--font-size-base);
+  font-size: 0.875rem !important;
   color: var(--color-text-secondary);
   line-height: var(--line-height-relaxed);
   margin: 0 0 var(--space-4) 0;
@@ -108,14 +133,14 @@
 }
 
 .info-widget__stat-value {
-  font-size: var(--font-size-lg);
+  font-size: 1rem !important;
   font-weight: var(--font-weight-bold);
   color: var(--color-accent);
   line-height: 1;
 }
 
 .info-widget__stat-label {
-  font-size: var(--font-size-sm);
+  font-size: 0.75rem !important;
   color: var(--color-text-secondary);
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -137,7 +162,7 @@
   }
 
   .info-widget__title {
-    font-size: var(--font-size-lg);
+    font-size: 0.75rem !important;
   }
 
   .info-widget__stats {

@@ -12,6 +12,7 @@ export class AboutSection {
     this.resumeLink = options.resumeLink || null;
     this.currentFocus = options.currentFocus || [];
     this.name = options.name || '';
+    this.companies = options.companies || [];
     this.photoLoaded = false;
 
     this.init();
@@ -42,9 +43,8 @@ export class AboutSection {
           ${this.renderPhoto()}
           <div class="about-section__text">
             ${this.renderBio()}
-            ${this.renderHighlights()}
+            ${this.renderCompanies()}
             ${this.renderCurrentFocus()}
-            ${this.renderResumeLink()}
           </div>
         </div>
       </div>
@@ -85,6 +85,28 @@ export class AboutSection {
     return `
       <div class="about-section__bio">
         ${bioParagraphs}
+      </div>
+    `;
+  }
+
+  /**
+   * Render companies worked at
+   */
+  renderCompanies() {
+    if (!this.companies || this.companies.length === 0) return '';
+
+    const companyLogos = this.companies.map(company => `
+      <div class="about-section__company" title="${company.name}">
+        <img src="${company.logo}" alt="${company.name}" class="about-section__company-logo" onerror="this.style.display='none'" />
+      </div>
+    `).join('');
+
+    return `
+      <div class="about-section__companies">
+        <h3 class="about-section__subtitle">Companies I've Worked With</h3>
+        <div class="about-section__company-list">
+          ${companyLogos}
+        </div>
       </div>
     `;
   }
@@ -220,6 +242,7 @@ export class AboutSection {
       this.resumeLink = data.resumeLink || null;
       this.currentFocus = data.currentFocus || [];
       this.name = data.name || '';
+      this.companies = data.companies || [];
 
       this.photoLoaded = false;
       this.render();
@@ -243,6 +266,7 @@ export class AboutSection {
     if (data.resumeLink !== undefined) this.resumeLink = data.resumeLink;
     if (data.currentFocus !== undefined) this.currentFocus = data.currentFocus;
     if (data.name !== undefined) this.name = data.name;
+    if (data.companies !== undefined) this.companies = data.companies;
 
     this.photoLoaded = false;
     this.render();

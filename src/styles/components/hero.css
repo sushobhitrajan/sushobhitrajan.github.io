@@ -115,7 +115,7 @@
 
 /* Tagline */
 .hero__tagline {
-  font-size: var(--font-size-sm);
+  font-size: 1.125rem;
   font-weight: var(--font-weight-normal);
   color: var(--color-text-secondary);
   line-height: var(--line-height-relaxed);

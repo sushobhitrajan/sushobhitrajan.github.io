@@ -1,30 +1,49 @@
 /**
  * Contact Section Styles
+ * Modern, colorful design with gradient accents
  */
 
 .contact-section {
   padding: var(--space-8) var(--space-4);
-  background: var(--color-background);
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  position: relative;
+}
+
+.contact-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3B82F6, #8B5CF6, #EC4899);
 }
 
 .contact-section__container {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   text-align: center;
 }
 
 .contact-section__title {
   font-size: var(--font-size-h2);
-  font-weight: var(--font-weight-bold);
+  font-weight: 700;
   color: var(--color-text);
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-3);
+  background: linear-gradient(135deg, #3B82F6, #8B5CF6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .contact-section__cta {
-  font-size: var(--font-size-lg);
+  font-size: 1.125rem;
   color: var(--color-text-secondary);
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-8);
   line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .contact-section__content {
@@ -34,66 +53,174 @@
   align-items: center;
 }
 
+/* Contact Card */
 .contact-section__info {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: var(--space-6);
+  border: 1px solid rgba(59, 130, 246, 0.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
   display: flex;
   flex-direction: column;
-  gap: var(--space-2);
+  gap: var(--space-4);
+  min-width: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-section__info::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3B82F6, #8B5CF6, #EC4899);
 }
 
 .contact-section__name {
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-semibold);
+  font-size: 1.5rem;
+  font-weight: 700;
   color: var(--color-text);
+  background: linear-gradient(135deg, #1e40af, #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .contact-section__email {
-  font-size: var(--font-size-lg);
-  color: var(--color-accent);
-  transition: opacity var(--transition-fast);
-  padding: var(--space-2) var(--space-3);
-  border-radius: var(--radius-md);
+  font-size: 1.125rem;
+  color: #3B82F6;
+  transition: all var(--transition-fast);
+  padding: var(--space-3) var(--space-4);
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(139, 92, 246, 0.08));
+  border: 1.5px solid rgba(59, 130, 246, 0.2);
+  font-weight: 600;
+  display: inline-block;
 }
 
 .contact-section__email:hover {
-  opacity: 0.8;
-  background: var(--color-hover);
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(139, 92, 246, 0.15));
+  border-color: rgba(59, 130, 246, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.2);
 }
 
+/* Social Links */
 .contact-section__social {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: var(--space-3);
   justify-content: center;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--space-2) 0;
 }
 
 .contact-section__social-link {
   display: flex;
   align-items: center;
   gap: var(--space-2);
-  padding: var(--space-2) var(--space-4);
-  background: var(--color-background-secondary);
-  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-6);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
   color: var(--color-text);
   transition: all var(--transition-fast);
   min-height: var(--touch-target-min);
+  min-width: 180px;
+  border: 1.5px solid rgba(59, 130, 246, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  position: relative;
+  overflow: visible;
+  white-space: nowrap;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-section__social-link::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #3B82F6, #8B5CF6);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
 }
 
 .contact-section__social-link:hover {
-  background: var(--color-hover);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.25);
+  border-color: transparent;
+}
+
+.contact-section__social-link:hover::before {
+  opacity: 1;
+}
+
+.contact-section__social-link:hover .contact-section__social-icon,
+.contact-section__social-link:hover .contact-section__social-label {
+  position: relative;
+  z-index: 1;
+  color: white;
 }
 
 .contact-section__social-icon {
-  font-size: 20px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+.contact-section__social-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.contact-section__social-link:hover .contact-section__social-icon {
+  transform: scale(1.1);
 }
 
 .contact-section__social-label {
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-medium);
+  font-size: 1rem;
+  font-weight: 600;
+  transition: color var(--transition-fast);
+  white-space: nowrap;
 }
 
 /* Tablet and up */
+@media (max-width: 640px) {
+  .contact-section {
+    padding: var(--space-6) var(--space-3);
+  }
+
+  .contact-section__info {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .contact-section__social {
+    gap: var(--space-2);
+  }
+
+  .contact-section__social-link {
+    padding: var(--space-2) var(--space-3);
+    flex-shrink: 0;
+  }
+
+  .contact-section__social-label {
+    font-size: 0.875rem;
+  }
+}
+
 @media (min-width: 768px) {
   .contact-section {
     padding: var(--space-12) var(--space-4);
@@ -113,5 +240,9 @@
 
   .contact-section__social-link:hover {
     transform: none;
+  }
+
+  .contact-section__social-icon {
+    transition: none;
   }
 }
