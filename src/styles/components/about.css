@@ -170,13 +170,26 @@
 
 .about-section__company-list {
   display: flex;
-  flex-wrap: wrap;
-  /* Allow wrapping */
   gap: var(--space-6);
   align-items: center;
   justify-content: center;
-  /* Center logos */
   padding: var(--space-4) 0;
+  animation: scroll-companies 40s linear infinite;
+}
+
+/* Pause animation on hover */
+.about-section__company-list:hover {
+  animation-play-state: paused;
+}
+
+/* Keyframe animation for companies scrolling left to right */
+@keyframes scroll-companies {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .about-section__company {

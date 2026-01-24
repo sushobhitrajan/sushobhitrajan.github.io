@@ -91,8 +91,7 @@ export class ContactSection {
       </a>
     `).join('');
 
-    // Duplicate links for seamless infinite scroll
-    return socialLinksHTML + socialLinksHTML;
+    return socialLinksHTML;
   }
 
   /**
