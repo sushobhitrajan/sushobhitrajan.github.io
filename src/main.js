@@ -12,6 +12,7 @@ import { SkillsSection } from './components/SkillsSection.js';
 import { ExperienceSection } from './components/ExperienceSection.js';
 import { ConnectSection } from './components/ConnectSection.js';
 import { ContactSection } from './components/ContactSection.js';
+import { BackgroundAnimation } from './components/BackgroundAnimation.js';
 
 // Application initialization
 console.log('Portfolio System Initialized');
@@ -81,6 +82,12 @@ const contactSection = new ContactSection({});
 // Load contact data from JSON
 contactSection.loadData('/src/data/contact.json').catch(error => {
   console.error('Failed to load contact data:', error);
+});
+
+// Initialize Background Animation
+const backgroundAnimation = new BackgroundAnimation({
+  particleCount: 69, // +10% more
+  connectionDistance: 150
 });
 
 // Show the app once everything is initialized

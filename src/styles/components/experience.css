@@ -5,7 +5,7 @@
 
 .experience-section {
   padding: var(--space-8) var(--space-4);
-  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  /* background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%); removed for background animation */
   position: relative;
 }
 

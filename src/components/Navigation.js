@@ -35,7 +35,7 @@ export class Navigation {
   render() {
     const html = `
       <div class="navigation__container container">
-        ${this.renderProfile()}
+        ${this.renderLogo()}
         ${this.renderLinks()}
       </div>
     `;
@@ -46,16 +46,23 @@ export class Navigation {
   /**
    * Render profile image/avatar
    */
-  renderProfile() {
-    if (!this.profileImage) return '';
-
+  /**
+   * Render CSS 3D Cube with Inner Prism
+   */
+  renderLogo() {
     return `
-      <a href="/" class="navigation__profile" aria-label="Home">
-        <img
-          src="${this.profileImage}"
-          alt="Profile"
-          class="navigation__profile-image"
-        />
+      <a href="/" class="navigation__logo" aria-label="Home">
+        <div class="scene">
+          <div class="cube-object">
+            <!-- Cube Faces -->
+            <div class="cube__face cube__face--front"></div>
+            <div class="cube__face cube__face--back"></div>
+            <div class="cube__face cube__face--right"></div>
+            <div class="cube__face cube__face--left"></div>
+            <div class="cube__face cube__face--top"></div>
+            <div class="cube__face cube__face--bottom"></div>
+          </div>
+        </div>
       </a>
     `;
   }

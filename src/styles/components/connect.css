@@ -5,7 +5,7 @@
 
 .connect-section {
   padding: var(--space-8) 0;
-  background: var(--color-background);
+  /* background: var(--color-background); removed for background animation */
   position: relative;
 }
 

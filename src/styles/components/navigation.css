@@ -28,33 +28,126 @@
   padding-top: var(--space-3);
   padding-bottom: var(--space-3);
   background-color: var(--color-background);
+  position: relative;
+  /* For absolute positioning of logo */
 }
 
 /* Profile image/avatar */
-.navigation__profile {
-  display: flex;
-  align-items: center;
-  transition: opacity var(--transition-fast);
-}
-
-.navigation__profile:hover {
-  opacity: 0.8;
-}
-
-.navigation__profile-image {
+/* Logo Styles */
+/* Logo Styles */
+/* Logo Styles */
+/* Logo Styles */
+.navigation__logo {
+  margin-right: var(--space-4);
+  /* Scene setup */
+  perspective: 800px;
   width: 40px;
   height: 40px;
-  border-radius: var(--radius-full);
-  object-fit: cover;
-  border: 2px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.6);
+  /* Reduced from 0.8 to 0.6 */
+  position: relative;
+  z-index: 10;
 }
 
+.scene {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.cube-object {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transform: rotateX(-15deg) rotateY(25deg);
+  transition: transform 0.5s;
+  /* Keep for other transforms if any */
+  /* Always rotate */
+  animation: spin-cube 10s linear infinite;
+}
+
+/* Spin faster on hover (4x speed: 10s / 4 = 2.5s) */
+.navigation__logo:hover .cube-object {
+  animation-duration: 2.5s;
+}
+
+/* Cube Faces */
+/* Cube Faces */
+/* Cube Faces */
+.cube__face {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 1px solid transparent;
+  /* Reduced from 2px to 1px */
+  background: rgba(255, 255, 255, 0.05);
+  /* Very subtle glass */
+  opacity: 0.8;
+  /* Increased slightly for visibility */
+}
+
+/* Colorful Edges */
+.cube__face--front {
+  transform: rotateY(0deg) translateZ(20px);
+  border-color: #06b6d4;
+  /* Cyan */
+}
+
+.cube__face--right {
+  transform: rotateY(90deg) translateZ(20px);
+  border-color: #d946ef;
+  /* Magenta */
+}
+
+.cube__face--back {
+  transform: rotateY(180deg) translateZ(20px);
+  border-color: #ef4444;
+  /* Red */
+}
+
+.cube__face--left {
+  transform: rotateY(-90deg) translateZ(20px);
+  border-color: #84cc16;
+  /* Lime */
+}
+
+.cube__face--top {
+  transform: rotateX(90deg) translateZ(20px);
+  border-color: #eab308;
+  /* Yellow */
+}
+
+.cube__face--bottom {
+  transform: rotateX(-90deg) translateZ(20px);
+  border-color: #3b82f6;
+  /* Blue */
+}
+
+/* Prism styles removed */
+
+@keyframes spin-cube {
+  from {
+    transform: rotateX(-15deg) rotateY(0deg);
+  }
+
+  to {
+    transform: rotateX(-15deg) rotateY(360deg);
+  }
+}
+
+/* Navigation links container */
 /* Navigation links container */
 .navigation__links {
   display: flex;
   align-items: center;
   gap: 4px;
   justify-content: center;
+  /* margin: 0 auto; removed to keep logo and links grouped in center */
 }
 
 /* Individual navigation link */
@@ -169,11 +262,13 @@
 /* Mobile styles */
 @media (max-width: 767px) {
   .navigation {
-    position: fixed !important; /* Keep it fixed */
+    position: fixed !important;
+    /* Keep it fixed */
   }
 
   .navigation__container {
-    flex-direction: row !important; /* Keep horizontal */
+    flex-direction: row !important;
+    /* Keep horizontal */
     gap: 0 !important;
     padding: var(--space-2) var(--space-2) !important;
     background-color: var(--color-background) !important;
@@ -184,15 +279,18 @@
   }
 
   .navigation__links {
-    flex-direction: row !important; /* Horizontal layout */
-    flex-wrap: wrap !important; /* Allow wrapping if needed */
+    flex-direction: row !important;
+    /* Horizontal layout */
+    flex-wrap: wrap !important;
+    /* Allow wrapping if needed */
     gap: 2px !important;
     width: 100% !important;
     justify-content: center !important;
   }
 
   .navigation__link {
-    font-size: 11px !important; /* Smaller text */
+    font-size: 11px !important;
+    /* Smaller text */
     padding: var(--space-1) var(--space-1) !important;
     border-radius: var(--radius-sm) !important;
     white-space: nowrap !important;
@@ -233,6 +331,7 @@
 
 /* Accessibility: Reduced motion */
 @media (prefers-reduced-motion: reduce) {
+
   .navigation,
   .navigation__link,
   .navigation__toggle-icon,

@@ -6,7 +6,7 @@
 
 .skills-section {
   padding: var(--space-16) var(--space-4);
-  background: var(--color-background-secondary);
+  /* background: var(--color-background-secondary); removed for background animation */
 }
 
 .skills-section__container {

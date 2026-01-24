@@ -6,7 +6,7 @@
 
 .about-section {
   padding: var(--space-16) var(--space-4);
-  background: var(--color-background);
+  /* background: var(--color-background); removed for background animation */
 }
 
 .about-section__container {
