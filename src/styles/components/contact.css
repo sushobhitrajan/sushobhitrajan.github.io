@@ -241,8 +241,11 @@
   }
 
   .contact-section__email {
-    font-size: var(--font-size-sm);
-    /* Smaller on mobile */
+    font-size: 0.875rem;
+    padding: var(--space-2) var(--space-3);
+    white-space: normal;
+    word-break: break-word;
+    text-align: center;
   }
 
   .contact-section__social-label {
