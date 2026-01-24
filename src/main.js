@@ -13,9 +13,13 @@ import { ExperienceSection } from './components/ExperienceSection.js';
 import { ConnectSection } from './components/ConnectSection.js';
 import { ContactSection } from './components/ContactSection.js';
 import { BackgroundAnimation } from './components/BackgroundAnimation.js';
+import { WelcomeWidget } from './components/WelcomeWidget.js';
 
 // Application initialization
 console.log('Portfolio System Initialized');
+
+// Initialize Welcome Widget
+new WelcomeWidget();
 
 // Initialize Navigation
 const navigation = new Navigation({

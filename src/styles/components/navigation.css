@@ -83,8 +83,7 @@
   position: absolute;
   width: 40px;
   height: 40px;
-  border: 1px solid transparent;
-  /* Reduced from 2px to 1px */
+  border: 2px solid transparent;
   background: rgba(255, 255, 255, 0.05);
   /* Very subtle glass */
   opacity: 0.8;
