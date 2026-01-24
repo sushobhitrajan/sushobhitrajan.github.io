@@ -3,7 +3,7 @@
   "tagline": "Lead SSE with Applied ML Focus at Amazon",
   "photo": "/public/images/profile.jpg",
   "bio": [
-    "I'm a software engineer with 10+ years of experience building scalable distributed systems, machine learning platforms, and payment solutions at leading tech companies including AWS, Amazon, Salesforce, and Flipkart.",
+    "I'm a software engineer with 13+ years of experience building scalable distributed systems, machine learning platforms, and payment solutions at leading tech companies including AWS, Amazon, Salesforce, and Flipkart.",
     "Currently at AWS, I lead storage optimization and performance initiatives for AWS EBS. Previously, I worked on Amazon's co-branded credit card platform for Europe and Japan, was a core engineer designing the technical foundation for Einstein AI-powered sales enablement tools at Salesforce, and created personalized recommendation systems at Flipkart.",
     "I'm passionate about solving complex problems at scale, leveraging machine learning for real-world impact, and building systems that millions of users rely on every day."
   ],
@@ -22,15 +22,15 @@
     },
     {
       "name": "Flipkart",
-      "logo": "https://upload.wikimedia.org/wikipedia/en/2/2f/Flipkart_logo.svg"
-    },
-    {
-      "name": "IBM",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg"
+      "logo": "https://logos-world.net/wp-content/uploads/2020/11/Flipkart-Logo.png"
     },
     {
       "name": "Accenture",
       "logo": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Accenture.svg"
+    },
+    {
+      "name": "IBM",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg"
     }
   ],
   "highlights": [

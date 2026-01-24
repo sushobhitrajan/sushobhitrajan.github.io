@@ -22,8 +22,8 @@ const navigation = new Navigation({
   links: [
     { id: 'home', label: 'Home', path: '/' },
     { id: 'skills', label: 'Skills', path: '#skills' },
-    { id: 'about', label: 'About', path: '#about' },
     { id: 'connect', label: 'Mentorship', path: '#connect' },
+    { id: 'about', label: 'About', path: '#about' },
     { id: 'contact', label: 'Contact', path: '#contact' }
   ],
   activeLink: 'home',
@@ -62,6 +62,12 @@ skillsSection.loadData('/src/data/skills.json').catch(error => {
   console.error('Failed to load skills data:', error);
 });
 
+// Initialize Connect Section (Mentorship) - comes before About
+const connectSection = new ConnectSection();
+connectSection.init().catch(error => {
+  console.error('Failed to initialize connect section:', error);
+});
+
 // Initialize About Section
 const aboutSection = new AboutSection({});
 // Append to main
@@ -69,12 +75,6 @@ document.querySelector('main').appendChild(aboutSection.container);
 // Load about data from JSON
 aboutSection.loadData('/src/data/about.json').catch(error => {
   console.error('Failed to load about data:', error);
-});
-
-// Initialize Connect Section
-const connectSection = new ConnectSection();
-connectSection.init().catch(error => {
-  console.error('Failed to initialize connect section:', error);
 });
 
 // Initialize Contact Section
@@ -86,9 +86,21 @@ contactSection.loadData('/src/data/contact.json').catch(error => {
 
 // Initialize Background Animation
 const backgroundAnimation = new BackgroundAnimation({
-  particleCount: 69, // +10% more
+  particleCount: 84, // +10% more (was 76)
   connectionDistance: 150
 });
 
 // Show the app once everything is initialized
 document.getElementById('app').classList.add('loaded');
+
+// Handle hash navigation after everything is loaded
+// This ensures the page scrolls to the correct section on refresh
+setTimeout(() => {
+  if (window.location.hash) {
+    const targetId = window.location.hash.substring(1);
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+}, 100); // Small delay to ensure all sections are rendered

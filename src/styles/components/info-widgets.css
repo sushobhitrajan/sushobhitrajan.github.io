@@ -5,7 +5,7 @@
 
 .info-widgets {
   padding: var(--space-8) 0;
-  background: var(--color-background);
+  /* background: var(--color-background); removed for background animation */
   position: relative;
 }
 
@@ -88,14 +88,18 @@
 .info-widget__icon {
   font-size: 3rem;
   margin-bottom: var(--space-3);
-  display: none; /* Hide icons */
+  display: none;
+  /* Hide icons */
   animation: float 3s ease-in-out infinite;
 }
 
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
@@ -103,7 +107,8 @@
 
 /* Widget Title */
 .info-widget__title {
-  font-size: 1rem !important;
+  font-size: var(--font-size-lg) !important;
+  /* Consistent with other section titles */
   font-weight: var(--font-weight-bold);
   color: var(--color-text);
   margin: 0 0 var(--space-2) 0;
@@ -112,7 +117,8 @@
 
 /* Widget Description */
 .info-widget__description {
-  font-size: 0.875rem !important;
+  font-size: var(--font-size-sm) !important;
+  /* Consistent with other sections */
   color: var(--color-text-secondary);
   line-height: var(--line-height-relaxed);
   margin: 0 0 var(--space-4) 0;
@@ -133,14 +139,16 @@
 }
 
 .info-widget__stat-value {
-  font-size: 1rem !important;
+  font-size: var(--font-size-sm) !important;
+  /* Consistent sizing */
   font-weight: var(--font-weight-bold);
   color: var(--color-accent);
   line-height: 1;
 }
 
 .info-widget__stat-label {
-  font-size: 0.75rem !important;
+  font-size: var(--font-size-xs) !important;
+  /* Consistent sizing */
   color: var(--color-text-secondary);
   text-transform: uppercase;
   letter-spacing: 0.05em;

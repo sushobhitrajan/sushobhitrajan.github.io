@@ -32,7 +32,8 @@
 }
 
 .connect-section__subtitle {
-  font-size: var(--font-size-body);
+  font-size: var(--font-size-sm);
+  /* Consistent with About section */
   color: var(--color-text-secondary);
 }
 
@@ -97,7 +98,8 @@
 
 /* Card Title */
 .connect-card__title {
-  font-size: 1.125rem !important;
+  font-size: var(--font-size-lg) !important;
+  /* Consistent with About subtitles */
   font-weight: var(--font-weight-bold);
   color: var(--color-text);
   margin: 0 0 var(--space-3) 0;
@@ -106,7 +108,8 @@
 
 /* Card Description */
 .connect-card__description {
-  font-size: 0.9375rem !important;
+  font-size: var(--font-size-sm) !important;
+  /* Consistent with About paragraphs */
   color: var(--color-text-secondary);
   line-height: var(--line-height-relaxed);
   margin: 0 0 var(--space-4) 0;
@@ -127,7 +130,8 @@
   background: linear-gradient(135deg, rgba(59, 130, 246, 0.12), rgba(139, 92, 246, 0.12));
   border: 1.5px solid rgba(59, 130, 246, 0.3);
   border-radius: 20px;
-  font-size: 0.8125rem !important;
+  font-size: var(--font-size-xs) !important;
+  /* Consistent sizing */
   color: #2563EB;
   font-weight: 600;
   transition: all var(--transition-fast);
@@ -149,7 +153,8 @@
   color: white;
   text-decoration: none;
   border-radius: 12px;
-  font-size: 0.9375rem !important;
+  font-size: var(--font-size-sm) !important;
+  /* Consistent sizing */
   font-weight: 600;
   transition: all var(--transition-fast);
   box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);

@@ -18,7 +18,7 @@ export class SkillsSection {
     if (!this.container) {
       this.container = document.createElement('section');
       this.container.className = 'skills-section';
-      this.container.id = 'skills';
+      this.container.id = 'expertise'; // Changed from 'skills' to avoid conflict
     }
 
     this.render();

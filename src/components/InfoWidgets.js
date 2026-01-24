@@ -18,6 +18,7 @@ export class InfoWidgets {
     if (!this.container) {
       this.container = document.createElement('section');
       this.container.className = 'info-widgets';
+      this.container.id = 'skills'; // Add ID for navigation
       const hero = document.querySelector('.hero');
       if (hero && hero.nextSibling) {
         hero.parentNode.insertBefore(this.container, hero.nextSibling);

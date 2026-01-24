@@ -36,16 +36,29 @@ export class Navigation {
     const html = `
       <div class="navigation__container container">
         ${this.renderLogo()}
-        ${this.renderLinks()}
+        <div class="navigation__mobile-wrapper">
+          ${this.renderLinks()}
+          ${this.renderToggle()}
+        </div>
       </div>
+      ${this.renderBackdrop()}
     `;
 
     this.container.innerHTML = html;
   }
 
-  /**
-   * Render profile image/avatar
-   */
+  renderToggle() {
+    return `
+      <button class="navigation__toggle" aria-label="Toggle navigation">
+        <span class="navigation__toggle-icon"></span>
+      </button>
+    `;
+  }
+
+  renderBackdrop() {
+    return `<div class="navigation__backdrop"></div>`;
+  }
+
   /**
    * Render CSS 3D Cube with Inner Prism
    */
@@ -103,11 +116,40 @@ export class Navigation {
     // Scroll event for backdrop blur effect
     window.addEventListener('scroll', this.handleScroll.bind(this), { passive: true });
 
-    // Link clicks for active state
+    // Link clicks for active state & closing mobile menu
     const links = this.container.querySelectorAll('.navigation__link');
     links.forEach(link => {
-      link.addEventListener('click', this.handleLinkClick.bind(this));
+      link.addEventListener('click', (e) => {
+        this.handleLinkClick(e);
+        this.closeMobileMenu();
+      });
     });
+
+    // Mobile Toggle
+    const toggle = this.container.querySelector('.navigation__toggle');
+    if (toggle) {
+      toggle.addEventListener('click', this.handleToggleClick.bind(this));
+    }
+
+    // Backdrop Click
+    const backdrop = this.container.querySelector('.navigation__backdrop');
+    if (backdrop) {
+      backdrop.addEventListener('click', this.closeMobileMenu.bind(this));
+    }
+  }
+
+  handleToggleClick() {
+    this.container.classList.toggle('navigation--open');
+    // Update ARIA
+    const toggle = this.container.querySelector('.navigation__toggle');
+    const isOpen = this.container.classList.contains('navigation--open');
+    toggle.setAttribute('aria-expanded', isOpen);
+  }
+
+  closeMobileMenu() {
+    this.container.classList.remove('navigation--open');
+    const toggle = this.container.querySelector('.navigation__toggle');
+    if (toggle) toggle.setAttribute('aria-expanded', 'false');
   }
 
   /**

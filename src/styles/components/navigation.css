@@ -263,50 +263,69 @@
 @media (max-width: 767px) {
   .navigation {
     position: fixed !important;
-    /* Keep it fixed */
   }
 
+  /* Ensure logo is on left, toggle on right */
   .navigation__container {
-    flex-direction: row !important;
-    /* Keep horizontal */
-    gap: 0 !important;
-    padding: var(--space-2) var(--space-2) !important;
+    justify-content: space-between !important;
+    padding: var(--space-2) var(--space-3) !important;
     background-color: var(--color-background) !important;
   }
 
+  /* Show toggle */
   .navigation__toggle {
-    display: none !important;
+    display: flex !important;
   }
 
+  /* Mobile Drawer for Links */
   .navigation__links {
-    flex-direction: row !important;
-    /* Horizontal layout */
-    flex-wrap: wrap !important;
-    /* Allow wrapping if needed */
-    gap: 2px !important;
-    width: 100% !important;
-    justify-content: center !important;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    /* Hidden off-screen */
+    width: 250px;
+    height: 100vh;
+    background-color: var(--color-background);
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    padding: 80px var(--space-4) var(--space-4) !important;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Smooth slide */
+    z-index: var(--z-modal);
   }
 
+  /* Open State */
+  .navigation--open .navigation__links {
+    right: 0;
+  }
+
+  /* Link Styling in Drawer */
   .navigation__link {
-    font-size: 11px !important;
-    /* Smaller text */
-    padding: var(--space-1) var(--space-1) !important;
-    border-radius: var(--radius-sm) !important;
-    white-space: nowrap !important;
-    min-height: auto !important;
+    width: 100%;
+    font-size: 16px !important;
+    padding: var(--space-2) 0 !important;
+    border-bottom: 1px solid var(--color-border);
   }
 
-  .navigation__link:hover {
-    background-color: var(--color-hover) !important;
+  .navigation__link:hover,
+  .navigation__link--active {
+    background-color: transparent !important;
+    color: var(--color-accent) !important;
+    padding-left: var(--space-2) !important;
+    /* Indent on hover */
   }
 
+  /* Hide active indicator line in drawer */
   .navigation__link--active::after {
     display: none !important;
   }
 
-  .navigation__link--active {
-    background-color: var(--color-hover) !important;
+  /* Show Backdrop when open */
+  .navigation--open .navigation__backdrop {
+    opacity: 1;
+    visibility: visible;
   }
 }
 

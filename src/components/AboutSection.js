@@ -73,14 +73,31 @@ export class AboutSection {
   }
 
   /**
+   * Calculate years of experience since June 2012
+   */
+  calculateYearsOfExperience() {
+    const startDate = new Date('2012-06-01');
+    const currentDate = new Date();
+    const years = currentDate.getFullYear() - startDate.getFullYear();
+    const monthDiff = currentDate.getMonth() - startDate.getMonth();
+
+    // If we haven't reached June yet this year, subtract 1
+    return monthDiff < 0 ? years - 1 : years;
+  }
+
+  /**
    * Render bio paragraphs
    */
   renderBio() {
     if (!this.bio || this.bio.length === 0) return '';
 
-    const bioParagraphs = this.bio.map(paragraph => `
-      <p class="about-section__bio-paragraph">${paragraph}</p>
-    `).join('');
+    const yearsOfExperience = this.calculateYearsOfExperience();
+
+    const bioParagraphs = this.bio.map(paragraph => {
+      // Replace any instance of "XX+ years" with calculated years
+      const updatedParagraph = paragraph.replace(/\d+\+?\s*years?/gi, `${yearsOfExperience}+ years`);
+      return `<p class="about-section__bio-paragraph">${updatedParagraph}</p>`;
+    }).join('');
 
     return `
       <div class="about-section__bio">

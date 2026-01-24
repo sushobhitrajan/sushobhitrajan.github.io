@@ -78,7 +78,7 @@ export class ContactSection {
    * Render social media links
    */
   renderSocialLinks() {
-    return this.socialLinks.map(link => `
+    const socialLinksHTML = this.socialLinks.map(link => `
       <a
         href="${link.url}"
         class="contact-section__social-link"
@@ -90,6 +90,9 @@ export class ContactSection {
         <span class="contact-section__social-label">${link.platform}</span>
       </a>
     `).join('');
+
+    // Duplicate links for seamless infinite scroll
+    return socialLinksHTML + socialLinksHTML;
   }
 
   /**

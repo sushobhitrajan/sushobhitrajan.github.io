@@ -6,12 +6,17 @@
 
 .about-section {
   padding: var(--space-16) var(--space-4);
+  overflow-x: hidden;
+  /* Prevent horizontal scroll on mobile */
+  box-sizing: border-box;
+  /* Include padding in width calculation */
   /* background: var(--color-background); removed for background animation */
 }
 
 .about-section__container {
   max-width: var(--container-max-width);
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 /* Section Title */
@@ -24,18 +29,26 @@
   line-height: var(--line-height-tight);
 }
 
-/* Content Layout */
+/* Content Layout - Using flexbox for better mobile control */
 .about-section__content {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+  /* Stack vertically by default (mobile-first) */
   gap: var(--space-8);
-  align-items: start;
+  align-items: center;
+  /* Center items */
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
 }
 
 /* Photo Wrapper */
 .about-section__photo-wrapper {
-  width: 100%;
-  max-width: 300px;
+  width: auto;
+  /* Changed from 100% to prevent overflow */
+  max-width: 220px;
+  /* Reduced from 300px for better mobile fit */
+  /* Reduced from 300px for better mobile fit */
   margin: 0 auto;
   aspect-ratio: 1;
   border-radius: var(--radius-xl);
@@ -78,7 +91,8 @@
 }
 
 .about-section__bio-paragraph {
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-sm);
+  /* Reduced from base (14-16px instead of 16-20px) */
   line-height: var(--line-height-relaxed);
   color: var(--color-text);
   margin: 0;
@@ -86,7 +100,8 @@
 
 /* Subtitle */
 .about-section__subtitle {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-lg);
+  /* Reduced from xl (18-24px instead of 20-30px) */
   font-weight: var(--font-weight-semibold);
   color: var(--color-text);
   margin: 0 0 var(--space-3) 0;
@@ -108,7 +123,8 @@
 }
 
 .about-section__highlight-item {
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-sm);
+  /* Reduced from base */
   line-height: var(--line-height-normal);
   color: var(--color-text-secondary);
   padding-left: var(--space-4);
@@ -154,11 +170,12 @@
 
 .about-section__company-list {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  /* Allow wrapping */
   gap: var(--space-6);
   align-items: center;
-  justify-content: flex-start;
-  overflow-x: auto;
+  justify-content: center;
+  /* Center logos */
   padding: var(--space-4) 0;
 }
 
@@ -170,9 +187,11 @@
 }
 
 .about-section__company-logo {
-  height: 40px;
+  height: 60px;
+  /* Increased from 40px */
   width: auto;
-  max-width: 140px;
+  max-width: 180px;
+  /* Increased from 140px */
   object-fit: contain;
   filter: grayscale(100%);
   opacity: 0.6;
@@ -226,19 +245,66 @@
   outline-offset: 2px;
 }
 
-/* Tablet and Desktop Layout */
+/* Mobile condensed view */
+@media (max-width: 767px) {
+  .about-section {
+    padding: var(--space-8) var(--space-4);
+  }
+
+  .about-section__container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .about-section__title {
+    margin-bottom: var(--space-4);
+  }
+
+  .about-section__photo-wrapper {
+    max-width: 140px;
+    /* Small phone request */
+    width: 100%;
+    /* Ensure it doesn't overflow */
+  }
+
+  .about-section__content {
+    gap: var(--space-4);
+    width: 100%;
+    /* Prevent overflow */
+    max-width: 100%;
+    /* Flexbox column is default, no need to override */
+  }
+
+  .about-section__text {
+    gap: var(--space-4);
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .about-section__bio-paragraph {
+    font-size: 0.95rem;
+    /* Smaller font for small phones */
+    word-wrap: break-word;
+    /* Prevent long words from overflowing */
+  }
+
+  .about-section__subtitle {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-2);
+  }
+}
+
+/* Tablet (stacked but with more padding) */
 @media (min-width: 768px) {
   .about-section {
     padding: var(--space-16) var(--space-6);
   }
 
-  .about-section__content {
-    grid-template-columns: 300px 1fr;
-    gap: var(--space-10);
-  }
+  /* Content stays in column flex-direction by default */
 
   .about-section__photo-wrapper {
-    margin: 0;
+    max-width: 280px;
+    /* Slightly larger than mobile */
   }
 
   .about-section__highlight-list {
@@ -246,14 +312,39 @@
   }
 }
 
-/* Large Desktop */
-@media (min-width: 1024px) {
+/* Desktop (Side-by-side) - Moved up to 960px to prevent iPad clipping */
+@media (min-width: 960px) {
   .about-section__content {
-    grid-template-columns: 350px 1fr;
+    flex-direction: row;
+    /* Side-by-side on desktop */
+    gap: var(--space-10);
+    align-items: flex-start;
+  }
+
+  .about-section__photo-wrapper {
+    flex-shrink: 0;
+    /* Don't shrink */
+    width: 300px;
+    /* Fixed width on desktop */
+    max-width: 300px;
+    margin: 0;
+  }
+
+  .about-section__text {
+    flex: 1;
+    /* Take remaining space */
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1200px) {
+  .about-section__content {
     gap: var(--space-12);
   }
 
   .about-section__photo-wrapper {
+    width: 350px;
+    /* Larger on big screens */
     max-width: 350px;
   }
 }
