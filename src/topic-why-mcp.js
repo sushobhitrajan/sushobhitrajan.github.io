@@ -3,7 +3,7 @@ import { BackgroundAnimation } from './components/BackgroundAnimation.js';
 
 const links = [
   { id: 'home', label: 'Home', path: '/' },
-  { id: 'skills', label: 'Skills', path: '/#skills' },
+  { id: 'skills', label: 'Hands-On', path: '/#skills' },
   { id: 'tech-topics', label: 'Tech Topics', path: '/technical-topics.html' },
   { id: 'connect', label: 'Mentorship', path: '/#connect' },
   { id: 'about', label: 'About', path: '/#about' },
