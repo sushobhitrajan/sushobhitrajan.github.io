@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Technical Topics - Sushobhit Rajan">
+  <title>Technical Topics | Sushobhit Rajan</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="/src/styles/main.css">
+  <style>
+    #app {
+      opacity: 0;
+    }
+
+    #app.loaded {
+      opacity: 1;
+      transition: opacity 0.3s ease-in;
+    }
+
+    .page-wrapper {
+      padding-top: 120px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 10;
+    }
+
+    .topic-list {
+      max-width: 1000px;
+      width: 100%;
+      padding: 2rem;
+    }
+
+    .topic-card {
+      background: #FFFFFF;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      margin-bottom: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .topic-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      border-color: var(--color-primary);
+    }
+
+    .topic-card h2 {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+      color: var(--color-accent);
+    }
+
+    .topic-card p {
+      color: var(--color-text-muted);
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .topic-card a {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: var(--color-accent);
+      color: #FFFFFF;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s ease;
+    }
+
+    .topic-card a:hover {
+      background: var(--color-accent-hover);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script type="module" src="/src/technical-topics.js"></script>
+</body>
+
+</html>

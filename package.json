@@ -1,0 +1,24 @@
+{
+  "name": "sushobhitrajan.github.io",
+  "version": "1.0.0",
+  "description": "Modern developer portfolio with a clean white theme, flawless touch experience, and component-based architecture.",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sushobhitrajan/sushobhitrajan.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/sushobhitrajan/sushobhitrajan.github.io/issues"
+  },
+  "homepage": "https://github.com/sushobhitrajan/sushobhitrajan.github.io#readme",
+  "dependencies": {
+    "puppeteer": "^24.37.5"
+  }
+}

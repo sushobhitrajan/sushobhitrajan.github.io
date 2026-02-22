@@ -26,6 +26,7 @@ const navigation = new Navigation({
   links: [
     { id: 'home', label: 'Home', path: '/' },
     { id: 'skills', label: 'Skills', path: '#skills' },
+    { id: 'tech-topics', label: 'Tech Topics', path: '/technical-topics.html' },
     { id: 'connect', label: 'Mentorship', path: '#connect' },
     { id: 'about', label: 'About', path: '#about' },
     { id: 'contact', label: 'Contact', path: '#contact' }
