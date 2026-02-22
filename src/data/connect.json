@@ -7,36 +7,52 @@
       "title": "1:1 Mentorship",
       "description": "Personalized guidance on career growth, technical skills, and navigating the tech industry. Share experiences and learn from real-world scenarios.",
       "icon": "👥",
-      "link": "https://topmate.io/sushobhit_rajan",
+      "link": "#contact",
       "linkText": "Book a Session",
-      "tags": ["Career Growth", "Technical Skills", "Industry Insights"]
+      "tags": [
+        "Career Growth",
+        "Technical Skills",
+        "Industry Insights"
+      ]
     },
     {
       "id": "interview-prep",
       "title": "Interview Preparation",
       "description": "Master algorithms, data structures, and system design for top tech companies including Google, Amazon, AWS, Salesforce, Microsoft, Meta, and Apple.",
       "icon": "💼",
-      "link": "https://topmate.io/sushobhit_rajan",
+      "link": "#contact",
       "linkText": "Prepare for Success",
-      "tags": ["Algorithms", "System Design", "FAANG"]
+      "tags": [
+        "Algorithms",
+        "System Design",
+        "FAANG"
+      ]
     },
     {
       "id": "ai-guidance",
       "title": "AI & ML Guidance",
       "description": "Expert advice on machine learning systems, LLMs, recommendation engines, and building production-grade AI applications at scale.",
       "icon": "🤖",
-      "link": "https://topmate.io/sushobhit_rajan",
+      "link": "#contact",
       "linkText": "Get AI Guidance",
-      "tags": ["Machine Learning", "LLMs", "Production AI"]
+      "tags": [
+        "Machine Learning",
+        "LLMs",
+        "Production AI"
+      ]
     },
     {
       "id": "engineering-guidance",
       "title": "System Design & Scalability",
       "description": "Deep dive into distributed systems, microservices architecture, and building scalable solutions that handle millions of requests.",
       "icon": "⚙️",
-      "link": "https://topmate.io/sushobhit_rajan",
+      "link": "#contact",
       "linkText": "Discuss Architecture",
-      "tags": ["Distributed Systems", "Scalability", "Architecture"]
+      "tags": [
+        "Distributed Systems",
+        "Scalability",
+        "Architecture"
+      ]
     }
   ]
 }
