@@ -6,7 +6,7 @@ const links = [
   { id: 'skills', label: 'Hands-On', path: '/#skills' },
   { id: 'tech-topics', label: 'Tech Topics', path: '/technical-topics.html' },
   { id: 'connect', label: 'Mentorship', path: '/#connect' },
-  { id: 'about', label: 'About', path: '/#about' },
+  { id: 'about', label: 'About Me', path: '/#about' },
   { id: 'contact', label: 'Contact', path: '/#contact' }
 ];
 
