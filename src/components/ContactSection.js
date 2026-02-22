@@ -7,7 +7,8 @@ export class ContactSection {
   constructor(options = {}) {
     this.container = options.container || null;
     this.name = options.name || '';
-    this.email = options.email || '';
+    this.primaryLink = options.primaryLink || '';
+    this.primaryText = options.primaryText || '';
     this.socialLinks = options.socialLinks || [];
     this.callToAction = options.callToAction || '';
 
@@ -41,9 +42,9 @@ export class ContactSection {
         <div class="contact-section__content">
           <div class="contact-section__info">
             ${this.name ? `<p class="contact-section__name">${this.name}</p>` : ''}
-            ${this.email ? `
-              <a href="mailto:${this.email}" class="contact-section__email">
-                ${this.email}
+            ${this.primaryLink ? `
+              <a href="${this.primaryLink}" class="contact-section__email" target="_blank" rel="noopener noreferrer">
+                ${this.primaryText || this.primaryLink}
               </a>
             ` : ''}
           </div>
@@ -107,7 +108,8 @@ export class ContactSection {
       const data = await response.json();
 
       this.name = data.name || this.name;
-      this.email = data.email || this.email;
+      this.primaryLink = data.primaryLink || this.primaryLink;
+      this.primaryText = data.primaryText || this.primaryText;
       this.socialLinks = data.socialLinks || this.socialLinks;
       this.callToAction = data.callToAction || this.callToAction;
 
@@ -126,7 +128,8 @@ export class ContactSection {
    */
   update(data) {
     if (data.name !== undefined) this.name = data.name;
-    if (data.email !== undefined) this.email = data.email;
+    if (data.primaryLink !== undefined) this.primaryLink = data.primaryLink;
+    if (data.primaryText !== undefined) this.primaryText = data.primaryText;
     if (data.socialLinks !== undefined) this.socialLinks = data.socialLinks;
     if (data.callToAction !== undefined) this.callToAction = data.callToAction;
 

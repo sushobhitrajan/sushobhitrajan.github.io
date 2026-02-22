@@ -1,6 +1,7 @@
 {
   "name": "Sushobhit Rajan",
-  "email": "sushobhit.rajan@gmail.com",
+  "primaryLink": "https://topmate.io/sushobhit_rajan",
+  "primaryText": "Book a Session on Topmate",
   "callToAction": "Let's connect and build something amazing together! Whether you're looking for technical mentorship, collaboration opportunities, or just want to chat about distributed systems and ML.",
   "socialLinks": [
     {
