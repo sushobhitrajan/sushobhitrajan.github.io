@@ -64,7 +64,7 @@
 
 /* Skill Card */
 .skills-section__skill {
-  background: var(--color-background);
+  background: var(--color-card-background);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: var(--space-4);
@@ -72,54 +72,6 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
-}
-
-.skills-section__skill:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--color-accent);
-}
-
-.skills-section__skill:active {
-  transform: translateY(-2px);
-}
-
-/* Skill Header */
-.skills-section__skill-header {
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-  margin-bottom: var(--space-2);
-}
-
-.skills-section__skill-icon {
-  font-size: var(--font-size-xl);
-  line-height: 1;
-  flex-shrink: 0;
-}
-
-.skills-section__skill-name {
-  font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-semibold);
-  color: var(--color-text);
-  line-height: var(--line-height-tight);
-}
-
-/* Skill Details */
-.skills-section__skill-details {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-1);
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: all var(--transition-base);
-}
-
-.skills-section__skill:hover .skills-section__skill-details {
-  opacity: 1;
-  max-height: 200px;
-  margin-top: var(--space-2);
 }
 
 .skills-section__skill-description {
