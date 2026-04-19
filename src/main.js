@@ -14,9 +14,13 @@ import { ConnectSection } from './components/ConnectSection.js';
 import { ContactSection } from './components/ContactSection.js';
 import { BackgroundAnimation } from './components/BackgroundAnimation.js';
 import { WelcomeWidget } from './components/WelcomeWidget.js';
+import { ThemeManager } from './utils/ThemeManager.js';
 
 // Application initialization
 console.log('Portfolio System Initialized');
+
+// Initialize Theme Manager
+window.themeManager = new ThemeManager();
 
 // Initialize Welcome Widget
 new WelcomeWidget();
@@ -109,3 +113,44 @@ setTimeout(() => {
     }
   }
 }, 100); // Small delay to ensure all sections are rendered
+
+// Setup Viewport Animations (Scroll Reveal)
+const setupScrollReveal = () => {
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal-visible');
+        // Once animated, no need to observe anymore
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Targets for reveal
+  const revealTargets = [
+    '.skills-section',
+    '.about-section',
+    '.experience-section',
+    '.connect-section',
+    '.contact-section',
+    '.skills-section__category',
+    '.experience-section__item'
+  ];
+
+  // Wait for dynamic content to render
+  setTimeout(() => {
+    revealTargets.forEach(selector => {
+      document.querySelectorAll(selector).forEach(el => {
+        el.classList.add('reveal-hidden');
+        observer.observe(el);
+      });
+    });
+  }, 500);
+};
+
+setupScrollReveal();

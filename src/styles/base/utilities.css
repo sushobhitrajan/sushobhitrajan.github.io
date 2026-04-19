@@ -170,3 +170,16 @@
   .lg\:flex { display: flex; }
   .lg\:grid { display: grid; }
 }
+/* Reveal Animations */
+.reveal-hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  pointer-events: none;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}

@@ -14,10 +14,15 @@
 
 /* Scrolled state - add backdrop blur */
 .navigation--scrolled {
-  background-color: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background-color: var(--glass-background);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border-bottom: 1px solid var(--glass-border);
   box-shadow: var(--shadow-sm);
+}
+
+.navigation--scrolled .navigation__container {
+  background-color: transparent;
 }
 
 /* Navigation container */
@@ -180,6 +185,51 @@
   height: 2px;
   background-color: var(--color-accent);
   border-radius: var(--radius-full);
+}
+
+/* Actions container (Theme toggle + Mobile toggle) */
+.navigation__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* Theme toggle button */
+.navigation__theme-toggle {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  padding: 0;
+}
+
+.navigation__theme-toggle:hover {
+  background-color: var(--color-hover);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.navigation__theme-toggle .sun-icon {
+  display: block;
+}
+
+.navigation__theme-toggle .moon-icon {
+  display: none;
+}
+
+[data-theme="dark"] .navigation__theme-toggle .sun-icon {
+  display: none;
+}
+
+[data-theme="dark"] .navigation__theme-toggle .moon-icon {
+  display: block;
 }
 
 /* Mobile toggle button */
