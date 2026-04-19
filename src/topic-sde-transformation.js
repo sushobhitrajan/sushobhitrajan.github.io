@@ -28,7 +28,7 @@ document.getElementById('app').innerHTML = `
       </header>
 
       <section class="article-section">
-        <h2>The Starting Line: The Manual Grind</h2>
+        <h2>The Starting Line: Breaking the Manual Grind</h2>
         <p>We’ve all been there: a 40-hour work week where 30 hours are consumed by boilerplate, debugging typos, and chasing dependency hell. This was my "Manual Loop." I was so busy writing the code that I barely had time to think about the architecture. I was getting things done, but I wasn't unblocking the complex problems that really mattered.</p>
         
         <div class="diagram-container" style="background: var(--color-background-secondary); padding: 2rem; border-radius: var(--radius-lg); margin: 2rem 0;">
@@ -52,11 +52,11 @@ document.getElementById('app').innerHTML = `
               style M2 fill:#dcfce7,stroke:#22c55e
           </div>
         </div>
-        <p>I realized that the bottleneck wasn't my ability to code—it was the cognitive load of keeping every detail in my head. I needed a way to scale my impact without just typing faster.</p>
+        <p>I realized that the bottleneck wasn't my ability to code—it was the cognitive load of keeping every detail in my head. I needed a way to scale my impact without just typing faster. I needed a force multiplier.</p>
       </section>
 
       <section class="article-section">
-        <h2>The Turning Point: Discovering My First Force Multiplier</h2>
+        <h2>The Turning Point: Discovering a New Way to Build</h2>
         <p>The shift began when I started leaning into <strong>AWS Kiro (CLI & Chat Panel)</strong>. At first, it was just for autocomplete. But as I pushed its limits, I realized it could do much more. It could refactor entire directories. It could generate test suites. It could even brainstorm architectural patterns with me.</p>
         
         <p>Suddenly, the Chat Panel wasn't just a search box—it was a partner. I’d describe a high-level vision, and we’d iterate on the design before I ever touched a file. This was the moment I stopped being a "coder" and started becoming an "orchestrator."</p>
@@ -64,9 +64,9 @@ document.getElementById('app').innerHTML = `
 
       <section class="article-section">
         <h2>The Breakthrough: Spec-Driven Development</h2>
-        <p>The real leap happened when I formalized my approach into what I now call <strong>Spec-Driven Development</strong>. I stopped starting with `main.py` and started starting with a comprehensive Markdown spec.</p>
+        <p>The real leap happened when I formalized my approach into what I now call <strong>Spec-Driven Development</strong>. I stopped starting with <code>main.py</code> and started starting with a comprehensive Markdown spec.</p>
         
-        <p>By writing a solid spec first, I provided a "source of truth" that my agents could follow with laser precision. The agent didn’t have to guess my intent; it just had to implement the blueprint. This reduced the "hallucination" problem to near-zero and transformed my role from implementation to validation.</p>
+        <p>By writing a solid spec first, I provided a "source of truth" that my agents could follow with laser precision. The agent didn’t have to guess my intent; it just had to implement the blueprint. This reduced the "hallucination" problem to near-zero and transformed my role from implementation to validation. I was no longer fighting the syntax; I was sculpting the system.</p>
       </section>
 
       <section class="article-section">
@@ -85,15 +85,16 @@ document.getElementById('app').innerHTML = `
           </div>
         </div>
 
-        <p>To the SDE community: we are at an inflection point. When we stop fighting the syntax, we start solving the <strong>real</strong> problems. It’s faster, it’s more organized, and it makes engineering deeply fulfilling again. Let’s stop just writing code and start orchestrating the future.</p>
+        <p>To the SDE community: we are at an inflection point. When we stop fighting the syntax, we start solving the <strong>real</strong> problems. It’s faster, it’s more organized, and it makes engineering deeply fulfilling again. Let’s stop just writing code and start orchestrating the future. The journey is just beginning.</p>
       </section>
 
       <footer class="article-footer" style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--color-border);">
-        <p><em>This is just the beginning of the journey. If you're building with agents or using AWS Kiro, let's connect and push the boundaries of what's possible together.</em></p>
+        <p><em>If you're building with agents or using AWS Kiro, let's connect and push the boundaries of what's possible together.</em></p>
       </footer>
     </div>
   </main>
 `;
+
 
 
 
