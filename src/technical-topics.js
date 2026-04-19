@@ -28,7 +28,13 @@ document.getElementById('app').innerHTML = `
         <p>A breakdown of the fragmentation problem in modern AI integrations and how the Model Context Protocol acts as a universal USB port to solve the N &times; M complexity explosion.</p>
         <a href="/topics/why-mcp.html">Read Article &rarr;</a>
       </div>
-      
+
+      <div class="topic-card">
+        <h2>From Writing Code to Orchestrating Agents</h2>
+        <p>A personal look at how I transformed my development cycle using AWS Kiro and Spec-Driven Development to move from manual coding to agent orchestration.</p>
+        <a href="/topics/sde-transformation.html">Read Article &rarr;</a>
+      </div>
+
       <!-- More topics can be added here -->
     </div>
   </main>
