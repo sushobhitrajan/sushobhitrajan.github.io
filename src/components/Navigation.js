@@ -36,12 +36,10 @@ export class Navigation {
     const html = `
       <div class="navigation__container container">
         ${this.renderLogo()}
-        <div class="navigation__mobile-wrapper">
-          ${this.renderLinks()}
-          <div class="navigation__actions">
-            ${this.renderThemeToggle()}
-            ${this.renderToggle()}
-          </div>
+        ${this.renderLinks()}
+        <div class="navigation__actions">
+          ${this.renderThemeToggle()}
+          ${this.renderToggle()}
         </div>
       </div>
       ${this.renderBackdrop()}

@@ -29,12 +29,33 @@
 .navigation__container {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding-top: var(--space-3);
-  padding-bottom: var(--space-3);
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-6);
   background-color: var(--color-background);
   position: relative;
-  /* For absolute positioning of logo */
+  min-height: 80px;
+}
+
+/* On desktop, keep elements in their place */
+.navigation__logo {
+  flex: 0 0 auto;
+  z-index: 10;
+}
+
+.navigation__links {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+}
+
+.navigation__actions {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  justify-content: flex-end;
 }
 
 /* Profile image/avatar */
@@ -145,15 +166,6 @@
 }
 
 /* Navigation links container */
-/* Navigation links container */
-.navigation__links {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  justify-content: center;
-  /* margin: 0 auto; removed to keep logo and links grouped in center */
-}
-
 /* Individual navigation link */
 .navigation__link {
   position: relative;
@@ -165,6 +177,7 @@
   min-height: var(--touch-target-min);
   display: flex;
   align-items: center;
+  white-space: nowrap;
 }
 
 .navigation__link:hover {
@@ -192,6 +205,7 @@
   display: flex;
   align-items: center;
   gap: var(--space-2);
+  margin-left: var(--space-4);
 }
 
 /* Theme toggle button */
@@ -208,6 +222,7 @@
   cursor: pointer;
   transition: all var(--transition-base);
   padding: 0;
+  flex-shrink: 0;
 }
 
 .navigation__theme-toggle:hover {
