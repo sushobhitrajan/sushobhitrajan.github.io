@@ -14,6 +14,7 @@
   --color-accent-hover: #2563EB;
   --color-background: #FFFFFF;
   --color-background-secondary: #F8FAFC;
+  --color-card-background: rgba(255, 255, 255, 0.8);
 
   /* Spacing - 8px grid system */
   --space-1: 0.5rem;
@@ -126,20 +127,21 @@
 
 [data-theme="dark"] {
   --color-primary: #0F172A;
-  --color-text: #F1F5F9;
-  --color-text-secondary: #94A3B8;
+  --color-text: #FFFFFF;
+  --color-text-secondary: #CBD5E1;
   --color-border: #1E293B;
   --color-hover: #1E293B;
   --color-accent: #60A5FA;
   --color-accent-hover: #93C5FD;
   --color-background: #020617;
   --color-background-secondary: #0F172A;
+  --color-card-background: rgba(15, 23, 42, 0.8);
 
-  --glass-background: rgba(15, 23, 42, 0.7);
+  --glass-background: rgba(2, 6, 23, 0.7);
   --glass-border: rgba(255, 255, 255, 0.1);
 
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
-  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.3);
-  --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.4);
-  --shadow-xl: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.6);
+  --shadow-xl: 0 8px 32px rgba(0, 0, 0, 0.7);
 }
